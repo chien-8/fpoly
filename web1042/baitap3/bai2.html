@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        while(true){
+            var soD = prompt("nhap so kWh da dung:");
+            soD = Number(soD);
+            if(isNaN(soD)==false){
+                if(soD<=0){
+                    document.write("nhap sai");
+                    break;
+                }
+            }
+        }
+        var tien;
+        tien = Number(tien);
+            if (soD >= 0 && soD <= 50) {
+                tien = soD * 1.678;
+                document.write("số tiền cần phải trả:" + tien + "<br>");
+            } else if (soD >= 51 && soD <= 100) {
+                tien = soD * 1.734;
+                document.write("số tiền cần phải trả:" + tien + "<br>");
+            } else if (soD >= 101 && soD <= 200) {
+                tien = soD * 2.014;
+                document.write("số tiền cần phải trả:" + tien + "<br>");
+            } else if (soD >= 201 && soD <= 300) {
+                tien = soD * 2.536;
+                document.write("số tiền cần phải trả:" + tien + "<br>");
+            } else if (soD >= 301 && soD <= 400) {
+                tien = soD * 2.834;
+                document.write("số tiền cần phải trả:" + tien + "<br>");
+            } else if (soD >= 401) {
+                tien = soD * 2.927;
+                document.write("số tiền cần phải trả:" + tien + "<br>");
+            }
+        
+    </script> 
+</body>
+</html>

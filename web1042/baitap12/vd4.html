@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <input type="checkbox" v-modle="chk_khac"/>Khác <br>
+        <input v-if="chk_khac==true" type="text" placeholder="Nhập sở thích">
+        <ul>
+            <li v-for="objSV in dssv">
+                <b>{{objSV.masv}}</b>-{{objSV.hoten}}
+            </li>
+
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var options={
+            el:"#app",
+            data:{
+                chk_khac:true,
+                // mảng dssv dùng cho vòng lặp
+                dssv:[
+                    {masv:"sv1",hoten:"Nguyễn Văn A"},
+                    {masv:"sv2",hoten:"Nguyễn Văn B"},
+                    {masv:"sv3",hoten:"Nguyễn Văn C"},
+                    {masv:"sv4",hoten:"Nguyễn Văn D"}
+
+                ]
+
+            }
+        }
+        var app=new Vue(options);
+    </script>
+
+</body>
+</html>

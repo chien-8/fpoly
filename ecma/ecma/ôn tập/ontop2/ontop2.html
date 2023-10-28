@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            text-align: center;
+
+        }
+        .p1{
+            text-align: center;
+            margin-bottom: 50px;
+        }
+       .pro_list{
+            margin-left: 75px;
+            display: flex;
+            flex-wrap: wrap;
+       }
+       .viewprod{
+        margin-right: 50px;
+       }
+       .categ{
+        text-align: left;
+       }
+       
+    </style>
+</head>
+
+<body>
+
+    <section class="produc">
+        <h2>Our Popular Dishes</h2>
+        <p class="p1">Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut <br> labore et dolore
+            magna aliqut enim ad minim </p>
+
+        <div class="pro_list">
+            <!-- hiển thị sản phẩm -->
+            
+            
+        </div>
+
+    </section>
+    <section class="Category">
+        <div class="title">
+            <h2 class="categ">Categories</h2>
+            <a href=""><button class="view-all">View All Categories</button></a>
+        </div>
+        <div class="catelist">
+            <!-- hiển thị category -->
+        </div>
+    </section>
+    <script>
+        const ListProduct = [
+            {
+                id: 1,
+                name: "Big and Juicy Wagyu Beef Cheeseburger",
+                price: 30,
+                desc: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
+                image: "popular-item-2.png",
+                category: 1
+            },
+            {
+                id: 2,
+                name: "Fresh Lime Roasted Salmon",
+                price: 10,
+                desc: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
+                image: "popular-item-2.png",
+                category: 1
+            },
+            {
+                id: 3,
+                name: "The Best Easy One Pot Chicken and Rice",
+                price: 20,
+                desc: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
+                image: "popular-item-2.png",
+                category: 3
+            },
+            {
+                id: 4,
+                name: "Fresh and Healthy Mixed Mayonnaise ",
+                price: 50,
+                desc: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
+                image: "popular-item-2.png",
+                category: 4
+            },
+            {
+                id: 5,
+                name: "The Creamiest Creamy Chicken",
+                price: 60,
+                desc: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
+                image: "popular-item-2.png",
+                category: 5
+            },
+            {
+                id: 6,
+                name: "Fruity Pancake with Orange & Blueberry",
+                price: 15,
+                desc: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
+                image: "popular-item-2.png",
+                category: 6
+            }
+        ]
+        function showProduct(data) {
+            const prList = document.querySelector(".pro_list");
+            if (prList) {
+                prList.innerHTML = ""
+                for (let item of data) {
+                    prList.innerHTML += `
+                <div class="viewprod">
+                    <img src="${item.image}" alt=""></a>
+                    <h3>${item.name}</h3>
+                    <p>
+                        <img src="time.jpg" alt="">
+                        <span>30 Minutes</span>
+                        <img src="ForkKnife.png" alt="">
+                        <span>Snack</span>
+                    </p>
+                </div>
+            `
+                }
+            }
+
+        }
+        showProduct(ListProduct)
+
+        const ListCategory = [
+            {
+                id: 1,
+                name: "breakfast",
+                image: "./image/home/breakfast.png"
+            },
+            {
+                id: 2,
+                name: "vegan",
+                image: "./image/home/breakfast.png"
+            },
+            {
+                id: 3,
+                name: "meat",
+                image: "./image/home/breakfast.png"
+            },
+            {
+                id: 4,
+                name: "dessert",
+                image: "./image/home/breakfast.png"
+            },
+            {
+                id: 5,
+                name: "lunch",
+                image: "./image/home/breakfast.png"
+            },
+            {
+                id: 6,
+                name: "chocolate",
+                image: "./image/home/breakfast.png"
+            }
+        ]
+        function showcategory(data1){
+            const cateList=Document.querySelector(".catelist");
+            
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .anh {
+            width: 15px;
+            height: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <form onsubmit="return KiemTra()" id="form">
+        <label for="hoTen">Enter Name: </label>
+        <input type="text" id="hoTen" name="hoTen">
+        <span id="ten"></span>
+
+        <br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email">
+        <span id="email1"></span>
+
+        <br>
+        <label for="matkhau">Enter Passwork: </label>
+        <input type="password" id="password" name="password">
+        <span id="mkhau"></span>
+
+        <br>
+        <label for="checkmatkhau">Confirm Password: </label>
+        <input type="password" name="password2" id="password2">
+        <span id="checkmk"></span>
+        <br>
+        <input type="submit" value="register" />
+    </form>
+    <script>
+        function KiemTra(){
+            var hoTen = document.getElementById('hoTen');
+            var email = document.getElementById('email');
+            var matkhau = document.getElementById('password');
+            var checkmatkhau = document.getElementById('password2');
+            var re= new RegExp("\\w+@\\w+(\\.\\w+){1,2}","g");
+
+            var errorImage = "<img class=\"anh\" src='anh2.png'/>";
+            var successImage = "<img class=\"anh\" src='anh1.png'/>";
+
+            if (hoTen.value.length == 0) {
+                hoTen.style.border = "1px solid red";
+                document.getElementById('ten').innerHTML = `${errorImage} Please enter your name`;
+            } else {
+                document.getElementById('ten').innerHTML = successImage;
+            }
+
+            if (email.value.length == 0 ) { 
+                email.style.border = "1px solid red";
+                document.getElementById('email1').innerHTML = `${errorImage} Please enter your email`;
+            }else if(!email.value.match(re)){
+                email.style.border = "1px solid red";
+                document.getElementById('email1').innerHTML = `${errorImage} Please enter your email`;
+            } else{
+                document.getElementById('email1').innerHTML = successImage;
+            }
+
+            if (matkhau.value.length==0) {
+                password.style.border = "1px solid red";
+                document.getElementById('mkhau').innerHTML = `${errorImage} Please enter your password`;
+            } else {
+                document.getElementById('mkhau').innerHTML = successImage;
+            }
+
+            if (checkmatkhau.value.length==0) {
+                password2.style.border = "1px solid red";
+                document.getElementById('checkmk').innerHTML =`${errorImage} Please re-enter your password`;
+            } else if(matkhau.value != checkmatkhau.value){
+                password2.style.border = "1px solid red";
+                document.getElementById('checkmk').innerHTML =`${errorImage} Password does not match `;
+            }else{
+                document.getElementById('checkmk').innerHTML = successImage;
+            }
+            return false;
+        }
+    </script>
+</body>
+
+</html>

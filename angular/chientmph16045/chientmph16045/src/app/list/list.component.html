@@ -1,0 +1,31 @@
+<p>list works!</p>
+<a routerLink="signup">dang ky</a><br>
+<a routerLink="add">add</a><br>
+so sach trong kho :{{datalength}}
+<table>
+    <thead>
+        <tr>
+            <td>id</td>
+            <td>name</td>
+            <td>image</td>
+            <td>price</td>
+            <td>description</td>
+            <td>author</td>
+            <td>action</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of data">
+            <td>{{p.id}}</td>
+            <td>{{p.name}}</td>
+            <td><img src="{{p.image}}" alt=".."></td>
+            <td>{{p.image}}</td>
+            <td>{{p.author}}</td>
+            <td>{{p.description}}</td>
+            <td>
+                <button (click)="remove(p.id)">remove</button>
+                <button routerLink="update/{{p.id}}">update</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

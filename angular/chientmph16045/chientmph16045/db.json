@@ -1,0 +1,50 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "123",
+      "image": "123",
+      "price": 123,
+      "author": "2134",
+      "description": "123"
+    },
+    {
+      "name": "123",
+      "image": "123",
+      "price": "123",
+      "author": "123",
+      "description": "123",
+      "id": 2
+    },
+    {
+      "name": "213",
+      "image": "12",
+      "price": 9,
+      "author": "111",
+      "description": "111",
+      "id": 3
+    }
+  ],
+  "signup": [
+    {
+      "email": "taminhchien@gmail.com",
+      "pass": "123",
+      "id": 1
+    },
+    {
+      "email": "aa@gmail.com",
+      "pass": "1",
+      "id": 2
+    },
+    {
+      "email": "chien@gmail.com",
+      "pass": "123",
+      "id": 3
+    },
+    {
+      "email": "aaaaa@gmail.com",
+      "pass": "12345",
+      "id": 4
+    }
+  ]
+}

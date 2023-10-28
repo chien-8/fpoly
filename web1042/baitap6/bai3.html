@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+        chiều dài <input type="text" id="chieuDai" /><br>
+        chiều rộng <input type="text" id="chieuRong" /><br>
+        <button type="button" onclick="HinhCN.chuVi()">chu vi</button>
+        <button type="button" onclick="HinhCN.dienTich()">diện tích</button>
+        <h2 id="kq"></h2>
+    </form>
+    <script>
+        var HinhCN =new Object();
+        HinhCN.id =123;
+        HinhCN.nhap=function(){
+            this.chieuDai=Number(document.querySelector("#chieuDai").value) ;
+            this.chieuRong=Number( document.querySelector("#chieuRong").value);
+        }
+        HinhCN.dienTich=function(){
+            this.nhap();
+            var dt=this.chieuDai*this.chieuRong;
+            document.querySelector("#kq").innerHTML="diện tích= "+dt;
+        }
+        HinhCN.chuVi=function(){
+            this.nhap();
+            var cv=(this.chieuDai+this.chieuRong)*2;
+            document.querySelector("#kq").innerHTML="chu vi= "+cv;
+        }
+        
+        console.log(HinhCN);
+    </script>
+</body>
+</html>          

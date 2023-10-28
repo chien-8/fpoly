@@ -1,0 +1,34 @@
+h1{
+    color: rgb(6, 183, 236);
+    text-shadow: 0 0 5px rebeccapurple;
+}
+p{
+    font-style: initial;
+    font-size: larger;
+    font-variant: small-caps;
+    font-size: 20px;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    line-height: 25px;
+}
+.doan1{
+    color: rgb(90, 15, 228);
+}
+.doan2{
+    color:salmon;
+}
+.doan3{
+    color: springgreen;
+}
+body{
+    text-align: center;
+}
+
+
+
+a{
+    color:rgb(6, 183, 236);
+    font-style: ;
+    font-variant: small-caps;
+    text-decoration: ;
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span{
+            color: red;
+            font-size: 15px;
+        }
+        #a{
+            display: inline-block;
+            width: 120px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form" onsubmit="return kiemtra()">
+        <h2>đăng ký</h2>
+        <label id="a">họ tên:</label>
+        <input type="text" id="ten" name="ten">
+        <span id="ten1"></span>
+        <br>
+        <label id="a">mã sinh viên: </label>
+        <input type="text" id="msv">
+        <span id="msv1"></span>
+        <br>
+        <label id="a">email: </label>
+        <input type="email" id="email">
+        <span id="email1"></span>
+        <br>
+        <label id="a">sở thích:</label>
+        <input type="checkbox" id="st">bóng đá
+        <input type="checkbox" id="st">cầu lông
+        <span id="st1"></span>
+        <br>
+        <label id="a">mật khẩu:</label>
+        <input type="password" id="mk">
+        <span id="mk1"></span>
+        <br>
+        <label id="a">mật khẩu lại:</label>
+        <input type="password" id="mklai">
+        <span id="mk2"></span>
+        <br>
+        <input type="submit" value="gửi">
+    </form>
+</body>
+<script>
+    function kiemtra(){
+        var ten=document.getElementById('ten');
+        var msv=document.getElementById('msv');
+        var email=document.getElementById('email');
+        var st=document.getElementById('st');
+        var mk=document.getElementById('mk');
+        var mklai=document.getElementById('mklai');
+
+        if(ten.value.length==0){
+            ten.style.border="1px solid red";
+            document.getElementById('ten1').innerHTML="không được để trống tên";
+        }else{
+            ten.style.border="1px solid blue";
+            document.getElementById('ten1').innerHTML="";
+        }
+        
+
+        if(msv.value.length==0){
+            msv.style.border="1px solid red";
+            document.getElementById('msv1').innerHTML="không được để trống msv";
+        }else{
+            msv.style.border="1px solid blue";
+            document.getElementById('msv1').innerHTML="";
+        }
+        
+
+        if(email.value.length==0){
+            email.style.border="1px solid red";
+            document.getElementById('email1').innerHTML="không được để trống email";
+        }else{
+            email.style.border="1px solid blue";
+            document.getElementById('eamil1').innerHTML="";
+        }
+
+        var kt=0;
+        for(var i=0;i< st.length;i++){
+            if(st[i].checked==true){
+                kt++;
+            }
+        }
+        if(kt==0){
+            document.getElementById('st1').innerHTML="bạn phải chọn ít nhất 1 sở thích";
+        }else{
+            document.getElementById('st1').innerHTML="";
+        }
+
+        if(mk.value.length==0){
+            mk.style.border="1px solid red";
+            document.getElementById('mk1').innerHTML="không được để trống mk";
+        }else{
+            mk.style.border="1px solid blue";
+            document.getElementById('mk1').innerHTML="";
+        }
+
+        if(mklai.value.length==0){
+            mklai.style.border="1px solid red";
+            document.getElementById('mk2').innerHTML="không được để trống mk lại";
+        }else if(mklai.value!=mk.value){
+            mklai.style.border="1px solid red";
+            document.getElementById('mk2').innerHTML="mk nhập lại sai nhập lại";
+        }else{
+            mklai.style.border="1px solid blue";
+            document.getElementById('mk2').innerHTML="";
+        }
+
+        return false;
+    }
+</script>
+</html>

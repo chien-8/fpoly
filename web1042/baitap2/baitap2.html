@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // var mang = new Array();
+        // mang[0]= 22;
+        // mang[1]= 28;
+        // mang[6]= 29;
+        // mang[9]="nguyen van a";
+        // mang[2]=true;
+        // mang[4]=mang;
+        // document.write(mang);
+        // console.log(mang);
+
+        // var x = String(100);
+        // x = 10000;
+        // alert(typeof(x));
+
+ 
+        // var x=prompt("moi nhap diem:");
+        // &&
+        // if(x>=0 && x<=10){
+        //     document.write("hợp lệ");
+        //     document.log("ko hợp lệ");
+        // }else{
+        //     document.write(" ko hợp lệ");
+        //     document.log("hợp lệ");
+        // }
+
+        // ||
+        // if(x<0 || x>10){
+        //     document.write("ko hop le");
+        //     document.log("hop le");
+        // }
+        // else{
+        //     document.write("hop le");
+        //     document.log("ko hop le");
+        // }
+
+        // !
+        // if(!(x<0||x>10)){
+        //     document.write("hợp lệ");
+        //     document.log("ko hợp lệ");
+        // }
+        // else{
+        //     document.write("ko hợp lệ");
+        //     document.log("hợp lệ");   
+        // }
+
+        var a=prompt("moi nhap số a:");
+        var b=prompt("moi nhap số b:");
+        var c=prompt("moi nhap số c:");
+        var delta=Math.pow(b,2)-4*a*c;
+        delta=parseFloat(delta);     
+        if(a==0){
+            if(b==0){
+                document.write("phương trình vô nghiệm");
+            }
+            else{
+                document.write("phương trình có 1 nghiệm : "+(-c/b));
+            }
+        }else{
+            if(delta>0){
+                document.write("phương trình có nghiệm 1: "+(-b+Math.sqrt(delta))/2*a);
+                document.write("phương trình có nghiệm 2: "+(-b-Math.sqrt(delta))/2*a);
+            }
+            else if(delta==0){
+                document.write("phương trình có nghiệm kép: "+(-b/(2*a)));
+            }
+            else{
+                document.write("phương trình vô nghiệm");
+            }
+        }
+
+
+    </script>
+</body>
+</html>

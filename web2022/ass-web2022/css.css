@@ -1,0 +1,431 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+
+body{
+    width: 100%;
+    background-color: white;
+}
+
+@media only screen and (min-width: 1440px) {
+    .container{
+        height: auto;
+    }
+    .k1{
+        height: 70px;
+        background-color: black;
+    }
+    .logo1 img{
+        width: 256px;
+        height: 70px;
+        margin-left: 140px;
+    }
+    .logo1 a{
+        font-size: 13.19px;
+        color: #DAD3D3;
+        text-decoration: none;
+    }
+    .phone{
+        border: 3px solid #DAD3D3;
+        border-radius: 15px;
+        width: 143px;
+        height: 35px;
+        display: unset;
+        margin: 18px 17px;
+        margin-left: 650px;
+    }
+    
+    .dangky{
+        border: 3px solid #DAD3D3;
+        border-radius: 15px;
+        width: 143px;
+        height: 35px;
+        display: unset;
+        
+    }
+    
+    #navbarNav{
+        margin-left: 110px;
+    }
+     .k2{
+         background-color: #DAD3D3;
+     }
+    
+
+
+    .banner{
+        width: 1326px;
+        height: 607px;
+        text-align: center;
+        margin-top: 20px;
+        /* margin-left: 57px; */
+    }
+
+    .thongtin1{
+        display: unset;
+    }
+    .thongtinA{
+        width: 750px;
+        height: 500px;
+        margin-left: 140px;
+    }
+    
+    .thongtin1 h2{
+        color: #F80000;
+        text-align: center;
+        margin-bottom: 57px;
+        margin-top: 57px;
+    }
+    #chu1{
+        color: #1905F8;
+        font-size: 18px;
+        margin-left: 161px;
+        margin-top: 61px;
+    }
+    #so{
+        color: #F80000;
+        margin-top: 25px;
+    }
+    .chu2{
+        font-size: 25px;
+        margin-top: 13px;
+        text-decoration: none;
+        color: black;
+    }
+    .chu3{
+        margin-top: 25px;
+        font-size: 25px;
+        margin-left: 40px;
+    }
+    
+    .thongtinA p{
+        font-size: 25px;
+    }
+   
+
+
+    .thongtinB{
+        width: 421px;
+        height: 500px;
+        float: right;
+    }
+
+    #bang1{
+        width: 280px;
+        height: 87px;
+        border-radius: 5px;
+        background-color: #F5A546;color: white;
+    }
+    #chubang1A{
+        font-size: 25px;
+        
+        text-align: center;
+        display: inline-block;
+    }
+    #chubang1B{
+        font-size: 15px;
+        text-align: center;
+    }
+    #bang2{
+        width: 280px;
+        height: 87px;
+        border-radius: 5px;
+        background-color: #5E73E1;
+        margin-top: 45px;
+        color: white;
+    }
+    
+
+    .sanpham{
+        margin-left: 10px;
+    }
+    .noidung1 h2{
+        color: #F80000;
+        text-align: center;
+        margin-bottom: 57px;
+        margin-top: 57px;
+    }
+    .sp1{
+        border: 1px solid #DAD3D3;
+        width: 339px;
+        height: 310px;
+        margin-left: 71px;
+        float: left;
+    }
+    
+    .tgia{
+        background-color: #DAD3D3;
+        height: 87px;
+        width: auto;
+        margin-top: 28px;
+        text-align: center;
+        font-size: 21px;
+    }
+    #sp{
+        margin-top: 30px;
+        color: black;
+        text-decoration: none;
+    }
+    #gia{
+        margin-top: 15px;
+        color: #F80000;
+    }
+
+    .noidung2 h2{
+        color: #F80000;
+        text-align: center;
+        margin-bottom: 57px;
+        margin-top: 57px;
+    }
+    /* footer */
+    .footer{
+    height: 290px;
+    background-color: black;
+    margin-top: 74px;
+    }
+    .logo2{
+    padding: 110px 0px 0px 139px;
+    float: left;
+    }
+    #gach button{
+        width: 2px;
+        height: 248px;
+    float: left;
+    margin-top: 21px;
+    margin-left: 113px;
+}
+.foodter1{
+    display: unset;
+}
+#ftchu1{
+    padding-left: 113px;
+    color: white;
+}
+#ftchu2{
+    padding-left: 113px;
+    color: white;
+}
+.ftchu{
+    margin-top: 95px;
+}
+
+
+
+/* trang gioi thieu */
+    #modau{
+        margin-left: 48px;
+        margin-top: 20px;
+    }
+
+
+    .gioithieuLeft{
+        float: right;
+        width: 791px;
+        height: 665px;
+        margin-left: 50px;
+    }
+    .gioithieuRight{
+        float: left;
+        width: 339px;
+        height: 2500px;
+        margin-left: 30px;
+    }
+    
+    .title{
+        height: 50px;
+        background-color: #0264a5;
+    }
+    .title h2{
+        text-align: center;
+        color: white;
+        
+    }
+
+/* chung    */
+    .title{
+        width: 339px;
+        height: 50px;
+        background-color: #5E73E1;
+        margin-left: 32px;
+        margin-top: 14px;
+    }
+    .title h2{
+        text-align: center;
+        color: white;
+        line-height: 50px;
+    }
+    #right ul{
+        margin: 0px 0px 5px 0px ;
+    }
+    #right ul li {
+        border: 1px solid gray;
+        width: 339px;
+        list-style: none;
+        display: block;
+        padding-left:20px;
+        line-height: 50px;
+    }
+    #right ul li a{
+        text-decoration: none;
+    }
+    #right ul li:hover{
+        background-color: coral;
+        border-bottom: 1px solid grey;
+    }
+    #right video{
+        margin-left: 32px;
+    }
+/* het chung */
+
+
+/* het trang gioi thieu */
+/* trang san pham */
+
+    #modau{
+        margin-left: 48px;
+        margin-top: 57px;
+    } 
+    .sanphamLeft{
+        float: right;
+        width: 841px;
+        height: 665px;
+        
+    }
+    .sanpham1{
+        margin-left: 14px;
+    }
+    
+    .sanphamLeft h2{
+        margin-bottom: 57px;
+        margin-top: 57px;
+        margin-left: 46px;
+    }
+    .sp2{
+        border: 1px solid #DAD3D3;
+        width: 339px;
+        height: 310px;
+        margin-left: 69px;
+        float: left;
+    }
+    
+    .tgia1{
+        background-color: #DAD3D3;
+        height: 87px;
+        width: auto;
+        margin-top: 28px;
+        text-align: center;
+        font-size: 21px;
+    }
+    #sp2{
+        margin-top: 30px;
+        color: black;
+        text-decoration: none;
+    }
+    #gia2{
+        margin-top: 15px;
+        color: #F80000;
+    }
+
+   
+
+    .sanphamRight{ 
+        float: left;
+        width: 339px;
+        height: 1500px;
+        margin-left: 30px;
+    }
+
+
+/* het trang san pham */
+/* trang tin tức */
+    .tintucLeft{
+        float: right;
+        width: 841px;
+        height: 665px;
+        padding-left: 35px;
+    }
+    .ndtintuc{
+        width: 791px;
+        height: 216px;
+        margin-top: 37px;
+        padding-right: 30px;
+    }
+    .ndtintuc ul li{
+        list-style: none;
+        clear: left;
+        float: left;
+        border: 1px solid #DAD3D3;
+        width: 750px;
+    }
+    .ndtintuc ul li a{
+        font-size: 21px;
+        text-decoration: none;
+        color: black;    
+    }
+    .ndtintuc ul li p{
+        padding-top: 47px;
+        
+    }
+    .ndtintuc ul li img{
+        float: left;
+        margin-right: 20px;
+        
+    }
+
+    .tintucRight{
+        float: left;
+        width: 339px;
+        height: 1500px;
+        margin-left: 30px;
+    }
+/* hết trang tin tức */
+
+
+/* trang liên hệ */
+.lienheLeft{
+    float: right;
+    width: 841px;
+    height: auto;
+}
+.form{
+    width: 791px;
+    height: auto;
+    padding-left: 60px;
+}
+.form button{
+    margin-top: 40px;
+    color: white;
+    background-color: #F80000; width: 113px; height: 59px;
+}
+.lienhe1{
+    width: 750px;
+    height: 40px;
+}
+.form label{
+    margin-top: 40px;
+}
+.lienheLeft p{
+    margin-left: 50px;
+    margin-top: 40px;
+}
+.diachi1 a{
+    margin-top: 19px;
+}
+.lienheRight{
+    float: left;
+    width: 339px;
+    height: 900px;
+    margin-left: 30px;
+}
+/* hết trang liên hệ */
+  
+
+
+.menumbl{
+    display: none;
+}
+
+
+
+
+}
+
+

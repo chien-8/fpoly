@@ -1,0 +1,13 @@
+{
+  "products": [
+    {
+      "name": "Tạ Minh Chiến",
+      "type": "iphon",
+      "price": "1223",
+      "pricesale": "123",
+      "danhgia": "****",
+      "description": "221",
+      "id": 4
+    }
+  ]
+}

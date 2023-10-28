@@ -1,0 +1,109 @@
+{
+  "dishes": [
+    {
+      "id": 1,
+      "name": "phở bò đặc biệt ",
+      "amount": "0",
+      "price": "30000",
+      "type": "Đồ ăn nhẹ",
+      "description": "phở bò"
+    },
+    {
+      "name": "bún chả",
+      "amount": "0",
+      "price": "25000",
+      "type": "Đồ nướng",
+      "description": "đồ nướng",
+      "id": 2
+    },
+    {
+      "id": 3,
+      "name": "cocacola",
+      "amount": "12",
+      "price": "30000",
+      "type": "Đồ uống",
+      "description": "đồ uống"
+    },
+    {
+      "id": 4,
+      "name": "cơm sườn",
+      "amount": "0",
+      "price": "123",
+      "type": "Tráng miệng",
+      "description": "123"
+    },
+    {
+      "name": "Đinh Văn Kiên",
+      "amount": "1231",
+      "price": "123",
+      "type": "Tráng miệng",
+      "description": "213",
+      "id": 5
+    },
+    {
+      "name": "123123",
+      "amount": "12",
+      "price": "1223",
+      "type": "Tráng miệng",
+      "description": "121",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "name": "phở bò",
+      "amount": "0",
+      "price": "2131",
+      "type": "Đồ uống",
+      "description": "1231"
+    },
+    {
+      "name": "Đinh Văn Kiên",
+      "amount": "123",
+      "price": "123",
+      "type": "Tráng miệng",
+      "description": "213",
+      "id": 8
+    },
+    {
+      "name": "Tạ Minh Chiến",
+      "amount": "1231",
+      "price": "12431",
+      "type": "Tráng miệng",
+      "description": "124",
+      "id": 9
+    },
+    {
+      "name": "123123",
+      "amount": "1241",
+      "price": "124",
+      "type": "Tráng miệng",
+      "description": "124",
+      "id": 10
+    },
+    {
+      "name": "Tạ Minh Chiến",
+      "amount": "12",
+      "price": "12",
+      "type": "Tráng miệng",
+      "description": "12",
+      "id": 11
+    },
+    {
+      "name": "Tạ Minh Chiến",
+      "amount": "12",
+      "price": "12",
+      "type": "Tráng miệng",
+      "description": "12",
+      "id": 12
+    },
+    {
+      "name": "Đinh Văn Kiên",
+      "amount": "1231",
+      "price": "123",
+      "type": "Tráng miệng",
+      "description": "1231",
+      "id": 13
+    }
+  ],
+  "categories": []
+}

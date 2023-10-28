@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // var x=prompt("hãy chọn 1 menu: \n1.chức năng 1 \n2.chức năng 2 \n3.chức năng 3");
+        // // x= Number(x);
+        // // switch(x){
+        // //     case 1: 
+        // //         document.write("<br> bạn chọn chức năng 1");
+        // //         break;
+        // //     case 2:
+        // //         document.write("<br>banj chọn chức năng 2");
+        // //         break;
+        // //     case 3:
+        // //         document.write("<br>banj chọn chức năng 3");
+        // //         break;
+        // //     default:
+        // //         document.write("<br>bạn chọn sai chức năng");
+        // // }
+
+        // if(x==1){
+        //     document.write("<br> bạn chọn chức năng 1");
+        // }else if(x==2){
+        //     document.write("<br> bạn chọn chức năng 2");
+        // }else(x==3){
+        //     document.write("<br> bạn chọn chức năng 3");
+        // }
+
+        /*bài toán: nhập 1 số x<10, in ra màn hình  từd= số nguyên x đến 10*/
+        // var a=prompt("nhap số x: ");
+        // x=a;
+        // document.write("<hr>Dùng lệnh WHILE");
+        // while(x<=10){
+        //     document.write("<br>"+x);
+        //     x++;
+        // }
+
+        // /////////////////
+
+        // x=a;
+        // document.write("<hr>Dùng lệnh DO WHILE");
+        // do{
+        //     document.write("<br>"+x);
+        //     x++; 
+        // }while(x<=10);
+
+        // /////////////////
+        // x=a;
+        // document.write("<hr>Dùng lệnh DO WHILE");
+        // for(i=x;i<=10;i++)
+        //     document.write("<br>"+i);
+
+
+
+        //3 khai bao mang
+        // var mang=new Array();
+        // var mang=[];
+        var mang=["điện thoại","máy tính","ti vi"];
+        console.log(mang);
+        for(i=0;i<mang.length;i++){
+            document.write("<br>"+mang[i]);
+        }
+
+        //nhap mang tư ban phim
+        var dssp=[];
+        var soLuong =prompt("nhap so phan tu mang:");
+        for(i=0;i<soLuong;i++){
+            dssp[i]=prompt("nhap san pham thứ"+(i+1));
+
+        }
+// kết thúc vòng lap thu đc mang, dung vòng lặp for in ra màn hình
+        for(i=0;i<dssp.length;i++){
+            document.write("<br>"+dssp[i]);
+        }
+
+
+
+        
+    </script>
+</body>
+</html>

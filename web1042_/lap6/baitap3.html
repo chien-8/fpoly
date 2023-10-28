@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Đặt hàng</h2>
+    <form onsubmit="return ktra()">
+        <p>
+            <label>Sản phẩm</label>
+            <input id="sp">
+        </p>
+        <p>
+            <label>Loại</label>
+            <select id="loai">
+                <option></option>
+                <option value="dt">Điện thoại</option>
+                <option value="mt">Máy tính</option>
+            </select>
+        </p>
+        <p>
+            <label>Đơn giá</label>
+            <input id="dg">
+        </p>
+        <p>
+            <label>Nơi nhận hàng</label>
+            <input type="radio" name="dchi" onclick="hth(false)">Nội thành
+            <input type="radio" name="dchi" onclick="hth(true)">Ngoại thành
+        </p>
+        <p id="phivc" style="display: none;">
+            <label">Phí vận chuyển</label>
+            <input value="1000000" readonly>
+        </p>
+        <hr>
+        <button type="submit">Đặt mua</button>
+    </form>
+</body>
+</html>

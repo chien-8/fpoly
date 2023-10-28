@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>đăng ký</h1>
+    <form action="" method="get">
+
+        username <input type="text" name="username" id="username" /> <br>
+        passwd <input type="password" name="pwd" id="pwd" /> <br>
+        GT <input type="radio" name="gt" value="nam" /> Nam 
+           <input type="radio" name="gt" value="nu" /> Nữ <br>
+           <select id="KH">
+               <option value="1">Lập trình</option>
+               <option value="2">Đồ họa</option>
+           </select><br>
+           sở thích: <input type="checkbox" name="sothich" value="1">bóng đá <br>
+           sở thích: <input type="checkbox" name="sothich" value="2">bóng bàn<br>
+           sở thích: <input type="checkbox" name="sothich" value="3">bóng rổ <br>
+           sở thích: <input type="checkbox" name="sothich" value="4">bóng bánh <br>
+           <button onclick="show()" type="button">Submit</button>
+    </form>
+    <script>
+        function show(){
+            var username=document.querySelector("#username").value;
+            var gioi_tinh =document.getElementsByName("gt"); // lấy ra thẻ radio
+            console.log(gioi_tinh)
+            var gt=null;//lưu giá trị giới tính người dùng đã chọn
+            for(i=0;i<gioi_tinh.length;i++){
+                if(gioi_tinh[i].checked){
+                    gt=gioi_tinh[i].value; // radio nào đc chọn thì lấy giá trị
+                }
+            }
+            // ra khỏi vòng lặp
+            console.log("bạn đã chọn giới tính: "+gt);
+            // làm việc với selector
+            var kh=document.querySelector("#KH").value;
+            console.log("ban da chon khoa hoc: "+kh)
+            // làm việc với checkbox
+            var ds_sothich=document.getElementsByName("sothich");
+            var mang_chon_sothich=[]; // mảng chứa các giá trị checkbox được chọn
+            for(i=0;i<ds_sothich.length;i++){
+                if(ds_sothich[i].checked){
+                    mang_chon_sothich.push(  ds_sothich[i].value  );
+                }
+            }
+            // kết thúc vòng lặp for có mảng các phần tử được chọn
+            console.log(mang_chon_sothich)
+ 
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Bài 2: Buid-in function string</h1>
+    <label for="">String</label>
+    <input type="text" id="str" value="FPTPoly" />
+    <br>
+    <label for="">Number of character</label>
+    <input type="number" name="" id="num" />
+    <br>
+    <button id="btn">Convert</button>
+    <h2 id="show"></h2>
+    <script>
+        // declaration khai báo
+        var str = document.querySelector("#str");
+        var num = document.querySelector("#num");
+        var btn = document.querySelector("#btn");
+
+        btn.addEventListener("click", function () {
+            if (num.value >= str.value.length) {
+
+                document.querySelector("#show").innerHTML = str.value + ".";
+            } else {
+                var newSTR = str.value.slice(0, num.value);
+                // console.log(newSTR + "...");
+                document.querySelector("#show").innerHTML = newSTR + "...";
+            }
+
+        });
+    </script>
+</body>
+
+</html>

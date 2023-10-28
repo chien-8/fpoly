@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Tiêu đề website</title>
+</head>
+<body>
+    <h1 id="tieude">Danh sách</h1>
+    <ul>
+        <li>Phần tử 1</li>
+        <li>Phần tử 2</li>
+    </ul>
+   <script>
+       console.dir(document)
+       //1. lấy thông tin thẻ h1
+       //2. từ thẻ h1 ==> nội dung của thẻ title
+       var the_h1 =document.querySelector("#tieude");
+       var parent_h1=the_h1.parentNode;
+       var the_head= parent_h1.previousElementSibling;
+       console.log(the_head)
+       // danh sách các thẻ con của head
+    //    var the_con_head =the_head.childNodes;
+    //    console.log(the_con_head)
+    //    console.log(the_con_head[7])
+    var the_title=the_head.querySelector("title");
+    console.log(the_title)
+    // querySelectorAll(): hàm này trả về mảng phần tử
+    // querySelector(): Hàm này trả về 1 phần tử duy nhất 
+
+
+    //--------thêm phần tử vào danh sách: 
+    var the_li =document.createElement("li");
+    the_li.innerText="Phần tử mới thêm";
+    the_li.style.color="red";
+    the_h1.nextElementSibling.appendChild(the_li);
+
+   </script> 
+</body>
+</html>

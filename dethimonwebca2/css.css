@@ -1,0 +1,95 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+#body{
+    width: 980px;
+    height: 1330px;
+    background-color: white;
+    margin: 0 auto;
+}
+.logo{
+    
+    width: 980px;
+    background-color: #f95512;
+    height: 100px;
+    
+}
+.logo img{
+    margin-top: 15px;
+    margin-left:380px ;
+}
+#menu{
+    height: 37px;
+    background-color: #ffbb6b;
+}
+#menu ul li{
+    display: inline-block;
+    list-style: none;
+    line-height: 10px;
+}
+#menu ul li a{
+    color: black;
+    display: block;
+    text-decoration: none;
+    margin-top: 12px;
+    font-size: 12pt;
+}
+#menu ul li a:hover{
+    color: white;
+}
+#menu form{
+    float: right;
+}
+#menu button{
+    background-color: #272f54;
+    border: 1px solid white;
+    color: white;
+    margin-right: 15px;
+    margin-top: 12px;
+}
+#noidung{
+    
+    height: 864px;
+}
+#noidung h3{
+    margin: 25px 0;
+}
+.noidung1{
+    border: 1px solid gray;
+    width: 656px;
+    height: 360px;
+}
+.noidung1 ul li{
+    
+    display: inline-block;
+    list-style: none;
+    line-height: 10px;
+}
+.noidung2{
+    float: right;
+    border: 1px solid gray;
+    width: 306px;
+    height: 360px;
+}
+.noidung h4 a{
+    color: #ad3f00;
+    display: inline-block;
+    list-style: none;
+    line-height: 10px;
+    text-decoration: none;
+    margin-left: 20px;
+}
+.noidung2 img{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.noidung2 a:hover{
+    color: #000;
+}
+#footer{
+    background-color: #f95512;
+    height: 52px;
+}
+#footer h3{
+    color: white;
+    text-align: center;
+    padding: 15px;
+}

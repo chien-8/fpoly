@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="1.jfif" id="slide" width="300" height="200"/>
+    <button onclick="run()">start</button>
+    <button onclick="stop()">stop</button>
+    <script>
+        var objSlide;
+        var arr_img = ["1.jfif","2.jfif","3.jfif"];
+        var index = 0;
+        function run(){
+            // objSlide = setInterval(function(){},1000);
+            objSlide = setInterval(function(){
+                index++;
+                if(index==arr_img.length){
+                    index = 0;
+                    document.querySelector("#slide").src = arr_img[index];
+                }
+            },1000);
+            
+        }
+        function stop(){
+            clearInterval(objSlide); // xoa interval
+        }
+        run();
+    </script>
+</body>
+</html>

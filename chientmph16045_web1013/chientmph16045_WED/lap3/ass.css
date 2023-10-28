@@ -1,0 +1,39 @@
+.khung{
+    border-width: 1px;
+    border-style: solid;
+    width: 800px;
+    height: 1000px;
+}
+.doan1{
+    color: blue;
+    font-size: 12pt;
+    font-style: bold;
+    
+}
+.doan2{
+    color:blue;
+    font-size: 11pt;
+    font-style: bold;
+
+}
+.doan3{
+    color:blue;
+    font-style: bold;
+    font-size: 12pt;
+    
+}
+.doan4{
+    color:blue;
+    font-style: bold;
+    font-size: 12pt;  
+}
+.doan5{
+    color:blue;
+    font-style: italic;
+    font-size: 12pt;
+}
+.doan6{
+    color:blue;
+    font-style: bold;
+    font-size: 12pt;
+}

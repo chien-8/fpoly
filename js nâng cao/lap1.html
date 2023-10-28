@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css" media="screen">
+        #target {
+            width: 60px;
+            height: 60px;
+            background: #33691E;
+        }
+
+        #color {
+            display: block;
+            height: 30px;
+            line-height: 30px;
+            margin-bottom: 20px;
+            width: 200px;
+        }
+
+        .user_item {
+            color: green;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- bài 1 -->
+    <h2>bài 1</h2>
+    <div id="target">
+
+    </div>
+    <!-- bài 2 -->
+    <h2>bài 2</h2>
+    <input type="text" id="txtInput" value="33681E">
+    <h3>Input text</h3>
+    <!-- bài 3 -->
+    <h2>bài 3</h2>
+    <ul id="target1">
+        <!-- <li class="user_item"></li> -->
+    </ul>
+    <!-- bài 4 -->
+    <h2>bài 4</h2>
+    <div class="form">
+        <div>
+            <label>ID</label>
+            <input type="number" id="addUserID" value="" placeholder="">
+        </div>
+        <div>
+            <label>name</label>
+            <input type="text" id="addUserText" value="" placeholder="">
+        </div>
+        <div>
+            <label>Gender</label>
+            <select id="addUserGender">
+                <option value="1">male</option>
+                <option value="2">female</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit" id="addAction" onclick="add()">add</button>
+        </div>
+    </div>
+    <ul id="target2">
+
+    </ul>
+    <!-- bài 6 -->
+    <h2>bài 6</h2>
+    <form name="form1" id="form1" method="post">
+        email<input type="text" name="email" id="email" size="40"><br>
+        <input type="button" name="check" value="Check" onclick="checkEmail();">
+    </form>
+
+    <!-- bài thêm -->
+
+    <h2>bài thêm</h2>
+    <h3>3 4 -1 5 7 8 1</h3>
+    <p id="demo"></p>
+    <script>
+        //bài 1
+        var target = document.querySelector("#target");
+        target.onmouseover = function () {
+            // thực hiện đổi sang màu #BF360C
+            target.style.background = "#BF360C"
+        }
+        target.onmouseout = function () {
+            // thực hiện đổi sang màu #33681E
+            target.style.background = "#33681E"
+        }
+
+        // bài 2
+        var h3Text = document.querySelector("h3");
+        var txtInput = document.querySelector("#txtInput");
+        txtInput.onkeyup = function () {
+            h3Text.style.color = "red";
+        }
+
+        //bài 3
+        var users = [
+            { id: 1, name: "James Smith", gender: 1 },
+            { id: 2, name: "Isla Brown", gender: 2 },
+            { id: 3, name: "Amelia Davies", gender: 2 },
+            { id: 4, name: "Jacob Evans", gender: 1 }
+
+        ];
+        var target1 = document.querySelector("#target1");
+        target1.innerHTML = users.map(getFull);
+
+        function getFull(item) {
+           
+            return [`<li class="user_item">${item.id}-${item.name}-${item.gender}</li>`].join("");
+        }
+
+
+        // bài 4
+        var users2 = [
+            { id: 1, name: "James Smith", gender: 1 },
+            { id: 2, name: "Isla Brown", gender: 2 },
+            { id: 3, name: "Amelia Davies", gender: 2 },
+            { id: 4, name: "Jacob Evans", gender: 1 }
+        ];
+        var target2 = document.querySelector("#target2");
+
+        var addUserID = document.getElementById("addUserID");
+        var addUserText = document.getElementById("addUserText");
+        var addUserGender = document.getElementById("addUserGender");
+
+        target2.innerHTML = users2.map(getFull2);
+        function getFull2(item2) {
+            console.log(item2);
+            return [`<li class="user_item">${item2.id}-${item2.name}-${item2.gender}</li>`].join("");
+        }
+        function add() {
+            var them = {
+                id: addUserID.value,
+                name: addUserText.value,
+                gender: addUserGender.value
+            };
+            console.log(them);
+            users2.push(them);
+            target2.innerHTML = users2.map(getFull3);
+            function getFull3(item3) {
+                console.log(item3);
+                return [`<li class="user_item">${item3.id}-${item3.name}-${item3.gender}</li>`].join("");
+            }
+
+        }
+        // bài 6
+        function checkEmail() {
+            var email = document.getElementById('email');
+            var filter = /^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/;
+            if (!filter.test(email.value)) {
+                alert('Hay nhap email hop le.');
+                email.focus;
+                return false;
+            }
+            else {
+                alert('Email nay hop le.');
+            }
+        }
+        // bài thêm 
+    
+        var arr=[3,4,-1,5,7,8,1];
+            var sc =arr.sort(function(a,b){
+                return b - a;
+
+            });
+        document.getElementById("demo").innerHTML="mảng sắp xếp theo thứ tự giảm dần:" +sc;  
+        
+        
+    </script>
+</body>
+
+</html>

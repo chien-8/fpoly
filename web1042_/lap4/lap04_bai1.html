@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+        text-align:center;}
+        .abc{
+            text-align: center;
+            border: 2px solid #ff0003;
+            width: 50%;
+            margin-left: 370px;
+            }
+        .abc input{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function delayer(){
+            window.location="https://www.google.com.vn/?hl=vi"
+        }
+        function giai(form){
+            var x1,x2;
+            var x,y,z,delta;
+            x = parseInt(form.a.value);
+            y = parseInt(form.b.value);
+            z = parseInt(form.c.value);
+            delta=(y*y-4*x*z);
+            if(delta<0){
+                alert('phương trình vô nghiệm')
+            }else if(delta==0){
+                alert('phương trình có nghiệm kép')
+                x1=-y/(2*x); x2=-y/(2*x);
+                form.x.value=eval(x1);
+                form.y.value=eval(x2);
+            }else{
+                alert('phương trình có 2 nghiệm phân biệt')
+                x1=(-y-Math.sqrt(delta))/(2*x); 
+                x2=(-y+Math.sqrt(delta))/(2*x);
+                form.x.value=eval(x1);
+                form.y.value=eval(x2);
+            }
+        setTimeout('delayer()',3000);
+        }
+    </script>
+    <form method="POST" onload="setTimeout('delayer()',3000)">
+        <div class="abc">
+            <br>Nhập giá trị a: <input type="text" name="a" value="">
+            <br>Nhập giá trị b: <input type="text" name="b" value="">
+            <br>Nhập giá trị c: <input type="text" name="c" value="">
+            <br><h4>Đáp số: </h4>
+            <br>Giá trị x1: <input type="text" name="x" value="">
+            <br>Giá trị x2: <input type="text" name="y" value="">
+            <br><input type="button" value="giai" onclick="giai(this.form)">
+        </div>
+    </form>
+    
+</body>
+</html>

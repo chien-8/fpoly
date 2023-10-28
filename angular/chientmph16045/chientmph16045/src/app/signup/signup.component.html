@@ -1,0 +1,16 @@
+<p>signup works!</p>
+<form [formGroup]="signup" (ngSubmit)="onSignup()">
+    email
+    <input type="email" formControlName="email">
+    <div *ngIf="!email?.valid && email?.touched">
+        <span *ngIf="email?.errors?.['required']">khong dc de trong</span>
+    </div>
+    <br>
+    password
+    <input type="password" formControlName="pass">
+    <div *ngIf="!pass?.valid && pass?.touched">
+        <span *ngIf="pass?.errors?.['required']">khong dc de trong</span>
+    </div>
+    <br>
+    <button type="submit" [disabled]="signup.invalid">signup</button>
+</form>

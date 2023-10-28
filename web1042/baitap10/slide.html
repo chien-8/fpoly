@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="" id="img_slide" width="300" height="300">
+    <button onclick="prev()">prev</button>
+    <button onclick="play()">play</button>
+    <button onclick="pause()">pause</button>
+    <button onclick="next()">next</button>
+
+    <script>
+        var anh= document.querySelector("#img_slide");
+        var ds_ten_anh=['a1.jfif','a2.jfif','a3.jfif','a4.jfif'];
+        var stt= 0;
+        var arr_obj_image=[];
+        var slide_intv;
+
+        function loadImage(){
+            for(i=0;i<ds_ten_anh.length;i++){
+                arr_obj_image[i]=new Image();
+                arr_obj_image[i].src= ds_ten_anh[i];
+            }
+        }
+        function prev(){
+            stt --;
+            if(stt<0){
+                stt= ds_ten_anh.length - 1;
+
+            }
+            anh.setAttribute("src", arr_obj_image[stt].src);
+        }
+        function next(){
+            stt ++;
+            if(stt<0){
+                stt= ds_ten_anh.length - 1;
+
+            }
+            anh.setAttribute("src", arr_obj_image[stt].src);
+        }
+        function play(){
+            slide_intv=setInterval(function(){
+                next();
+            },1000);
+        }
+        function pause(){
+            clearInterval(slide_intv);
+        }
+
+        // gọi hàm  load ảnh
+        loadImage();
+        anh.setAttribute("src", arr_obj_image[stt].src);
+    </script>
+</body>
+</html>

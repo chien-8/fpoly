@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //tạo khuôn mẫu cho lớp HinhCN
+        function HinhChuNhat(chieuDai,chieuRong){
+            this.canh_dai=chieuDai;
+            this.canh_rong=chieuRong;
+            this.DienTich=function(){
+                return(this.canh_dai*this.canh_rong);
+            }
+            this.chuVi=function(){
+                return(this.canh_dai+this.canh_rong)*2;
+            }
+        }
+        //tạo hàng loạt hình CN
+        var hcn1=new HinhChuNhat(6,2);
+        document.write("<br>Diện tích hình 1: "+hcn1.DienTich());
+        var hcn2=new HinhChuNhat(20,10);
+        document.write("<br>Diện tích hình 2: "+hcn2.DienTich());
+        var hcn3=new HinhChuNhat(8,4);
+        document.write("<br>Diện tích hình 3: "+hcn3.DienTich());
+        //chu vi
+        var cv1=new HinhChuNhat(6,2);
+        document.write("<br>chu vi hình 1: "+cv1.chuVi());
+        var cv2=new HinhChuNhat(20,10);
+        document.write("<br>chu vi hình 2: "+cv2.chuVi());
+        var cv3=new HinhChuNhat(8,4);
+        document.write("<br>chu vi hình 3: "+cv3.chuVi());
+    </script>
+</body>
+</html>

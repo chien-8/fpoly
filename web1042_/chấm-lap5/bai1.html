@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="POST">
+        số hạng 1<input type="text" name="so1" value=""><br>
+        số hạng 2<input type="text" name="so2" value=""><br>
+        <input type="button" value="tong" onclick="tong(this.form)"><br>
+        kết quả<input type="text" name="kq" value="">
+    </form>
+    <script>
+        function tong(form){
+            var x,y;
+            var t;
+            x=parseInt(form.so1.value);
+            y=parseInt(form.so2.value);
+            t=x+y;
+            form.kq.value=eval(t);
+        }
+    </script>
+</body>
+</html>

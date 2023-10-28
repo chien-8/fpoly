@@ -1,0 +1,11 @@
+npm create vite@latest
+npm i axios
+npm i react-dom
+npm i react-router
+npm i react-router-dom
+npm i react-hook-form
+
+https://60371dc45435040017721a02.mockapi.io/products/
+
+import { Link } from "react-router-dom";
+import { useNavigate, useParams } from "react-router";

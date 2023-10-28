@@ -1,0 +1,6 @@
+Dùng font cho tiêu đề và menu
+https://fonts.google.com/noto/specimen/Noto+Sans+Mono
+nội dung thì dùng font roboto
+
+Biểu tượng home và ngôi sao dùng font FA
+Tham khảo ví dụ cách làm https://snvn.net/tool/font-fa.html 

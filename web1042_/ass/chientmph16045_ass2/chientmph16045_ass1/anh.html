@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css.css" rel="stylesheet">
+    <style>
+        #anh2{
+            width: 800px;
+            height: 500px;
+            margin-left: 62px;
+        }
+        #title{
+            margin-left: 420px;
+            font-size: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="body">
+        <div id="header">
+            <img src="img/Banner1-1.png" width="960px">
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="anh.html">Bộ sưu tập ảnh</a></li>
+                <li><a href="dangky.html">Đăng ký</a></li>
+                <li><a href="banhang.html">Bán hàng</a></li>
+            </ul>
+        </div>
+        <div id="noidung">
+            <h2>Bộ sưu tập ảnh</h2>
+            <div id="anh">
+                <img src="img/0.jpg" id="anh2" alt="">
+                <p id="title">Ảnh <span id="num">1</span> / <span id="demo">5</span></p>
+                <button id="prev" onclick="prev()"><img src="img/prev.png" width="30px" height="30px"></button>
+                <button id="next" onclick="next()"><img src="img/next.png" width="30px" height="30px"></button>
+            </div>
+        </div>
+        <div id="footer">
+            <h2>chientmph16045_assignment</h2>
+        </div>
+    </div>
+    
+</body>
+<script>
+        var images = [];
+        for (var i = 0; i < 5; i++) {
+            images[i] = new Image();
+            images[i].src = "img/" + i + ".jpg";
+        }
+        var index = 0;
+        function prev() {
+            index--;
+            if (index < 0) {
+                index = images.length - 1;
+            }
+            var anh = document.getElementById('anh2');
+            anh.src = images[index].src;
+            document.getElementById("num").innerHTML = index + 1;
+        }
+        function next() {
+            index++;
+            if (index >= images.length) {
+                index = 0;
+            }
+            var anh = document.getElementById('anh2');
+            anh.src = images[index].src;
+            document.getElementById("num").innerHTML = index + 1;
+        }
+    </script>
+</html>

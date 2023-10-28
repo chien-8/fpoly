@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="return KiemTra()" id="form">
+        <label for="hoTen">Enter Name: </label>
+        <input type="text" id="hoTen" name="hoTen">
+        <span id="ten"></span>
+        <br>
+        <label for="email">Email: </label>
+        <input type="email" name="email" id="email">
+        <span id="email1"></span>
+        <br>
+        <label for="">số đt</label>
+        <input type="text" name="sdt" id="sdt">
+        <span id="sdt1"></span>
+        <br>
+        <label for="matkhau">Enter Passwork: </label>
+        <input type="password" id="password" name="password">
+        <span id="mkhau"></span>
+        <br>
+        <label for="checkmatkhau">Confirm Password: </label>
+        <input type="password" name="password2" id="password2">
+        <span id="checkmk"></span>
+        <br>
+        <input type="submit" value="register" />
+    </form>
+    <script>
+        function KiemTra(){
+            var hoTen = document.getElementById('hoTen');
+            var email = document.getElementById('email');
+            
+            var matkhau = document.getElementById('password');
+            var checkmatkhau = document.getElementById('password2');
+            var re= new RegExp("\\w+@\\w+(\\.\\w+){1,2}","g");
+
+            
+
+            if (hoTen.value.length == 0) {
+                hoTen.style.border = "1px solid red";
+                document.getElementById('ten').innerHTML = "không được để trống tên";
+            } else {
+                document.getElementById('ten').innerHTML = "";
+            }
+
+            if (email.value.length == 0 ) { 
+                email.style.border = "1px solid red";
+                document.getElementById('email1').innerHTML = "không được để trống email";
+            }else if(!email.value.match(re)){
+                email.style.border = "1px solid red";
+                document.getElementById('email1').innerHTML = "email không hợp lệ";
+            } else{
+                document.getElementById('email1').innerHTML = "";
+            }
+            
+            if (matkhau.value.length==0) {
+                password.style.border = "1px solid red";
+                document.getElementById('mkhau').innerHTML = "không được để trống mật khẩu";
+            } else {
+                document.getElementById('mkhau').innerHTML = "";
+            }
+
+            if (checkmatkhau.value.length==0) {
+                password2.style.border = "1px solid red";
+                document.getElementById('checkmk').innerHTML ="khong được để trống ";
+            } else if(matkhau.value != checkmatkhau.value){
+                password2.style.border = "1px solid red";
+                document.getElementById('checkmk').innerHTML ="sai mât khâu";
+            }else{
+                document.getElementById('checkmk').innerHTML = "";
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>

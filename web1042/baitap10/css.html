@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 onmousemove="mv()">thẻ H1</h1>
+
+    <script>
+        var h = document.querySelector("h1");
+        h.style.backgroundColor="yellow";
+        h.style.boxShadow="5px 5px 10px red";
+        h.style.width="100px";
+        h.style.height="100px";
+
+        h.style.position="absolute";
+        
+        h.onclick = function () {
+           this.style.top=(this.offsetTop +150)+"px";
+        }
+        function mv() {
+            h.style.top = (h.offsetTop + 150) + "px";
+
+        }
+    </script>
+</body>
+</html>

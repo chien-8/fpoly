@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = prompt('nhap a= ')
+        var b = prompt('nhap b= ')
+        var c = prompt('nhap c= ')
+        var delta = Math.pow(b, 2) - 4 * a * c
+        document.write('delta: ' + delta + '<br>')
+        if (delta < 0) {
+            document.write('phuong trinh vo nghiêm' + '<br>')
+        } else if (delta == 0) {
+            document.write('phuong trinh co nghiêm kep' + (-b/(2 * a)) + '<br>')
+        } else {
+            document.write('phuong trinh co 2 nghiem' + (-b + Math.sqrt(delta))/(2 * a) + '<br>' + (-b - Math.sqrt(delta)) /(2 * a) + '<br>')
+        }
+    </script>
+    </body>
+</html>

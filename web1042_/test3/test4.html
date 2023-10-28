@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="start()">start</button>
+    <button onclick="stop()">stop</button>
+    <img src="img/0.png" alt="" id="anh">
+</body>
+<script>
+    var images=[];
+    for(var i=0;i<6;i++){
+        images[i]=new Image();
+        images[i].src="img/"+i+".png";
+    }
+    var index=0;
+    function next(){
+        index++;
+        if(index>=images.length){
+            index=0;
+        }
+        var anh=document.getElementById('anh');
+        anh.src=images[index].src;
+    }
+    function prev(){
+        index--;
+        if(index<0){
+            index=images.length-1;
+        }
+        var anh=document.getElementById('anh');
+        anh.src=images[index].src;
+    }
+     
+    var clear;
+    function start(){
+        clear=setInterval(next,1500);
+    }
+    function stop(){
+        clearInterval(clear);
+    }
+</script>
+</html>

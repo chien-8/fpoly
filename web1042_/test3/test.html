@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #form {
+            border: 1px solid black;
+            margin-left: 400px;
+            margin-top: 100px;
+            height: 400px;
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input {
+            display: grid;
+            width: 250px;
+        }
+        #a{
+            margin-left: 20px;
+        }
+        span {
+            color: red;
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form onsubmit="return kiemtra();" id="form">
+        <h2>đăng ký</h2>
+        <div id="a">
+            <label>tên:</label>
+            <input type="text" id="ten" name="ten">
+            <span id="ten1"></span><br>
+            <label>masv:</label>
+            <input type="text" id="ma" name="ma">
+            <span id="ma1"></span><br>
+            <label>email:</label>
+            <input type="email" id="email">
+            <span id="email1"></span><br>
+            <label>mk:</label>
+            <input type="password" id="mk">
+            <span id="mk1"></span><br>
+            <label>mk lại:</label>
+            <input type="password" id="mklai">
+            <span id="mk2"></span><br>
+            <input type="submit" value="gửi">
+        </div>
+    </form>
+</body>
+<script>
+    function kiemtra() {
+        var ten = document.getElementById('ten');
+        var ma = document.getElementById('ma');
+        var email = document.getElementById('email');
+        var mk = document.getElementById('mk');
+        var mklai = document.getElementById('mklai');
+
+        if (ten.value.length == 0) {
+            ten.style.border = "1px solid red";
+            document.getElementById('ten1').innerHTML = "ko dc de trong ten";
+        } else {
+            ten.style.border = "1px solid blue";
+            document.getElementById('ten1').innerHTML = "";
+        }
+
+
+        if (ma.value.length == 0) {
+            ma.style.border = "1px solid red";
+            document.getElementById('ma1').innerHTML = "ko dc de trong masv";
+        } else {
+            ma.style.border = "1px solid blue";
+            document.getElementById('ma1').innerHTML = "";
+        }
+
+
+        if (email.value.length == 0) {
+            email.style.border = "1px solid red";
+            document.getElementById('email1').innerHTML = "ko dc de trong email";
+        } else {
+            email.style.border = "1px solid blue";
+            document.getElementById('email1').innerHTML = "";
+        }
+
+        if (mk.value.length == 0) {
+            mk.style.border = "1px solid red";
+            document.getElementById('mk1').innerHTML = "ko dc de trong mk";
+        } else {
+            mk.style.border = "1px solid blue";
+            document.getElementById('mk1').innerHTML = "";
+        }
+
+        if (mklai.value.length == 0) {
+            mklai.style.border = "1px solid red";
+            document.getElementById('mk2').innerHTML = "ko dc de trong mk";
+        } else if (mklai.value != mk.value) {
+            mklai.style.border = "1px solid red";
+            document.getElementById('mk2').innerHTML = "mk khong chinh xac nhap lai";
+        } else {
+            mklai.style.border = "1px solid blue";
+            document.getElementById('mk2').innerHTML = "";
+        }
+        return false;
+
+    }
+</script>
+
+</html>

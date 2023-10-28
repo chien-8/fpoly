@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            border: 1px solid black;
+            width: 300px;
+            height: 400px;
+            margin-left: 550px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input {
+            margin-top: 10px;
+            display: block;
+            width: 270px;
+        }
+        #a{
+            margin-left: 10px;
+        }
+        span {
+            color: red;
+            display: inline-block;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form onsubmit="return KiemTra()" id="form">
+        <h2>ĐĂNG KÝ THÀNH VIÊN</h2>
+        <div id="a">
+            <label for="">User: </label>
+            <input type="text" id="ten" name="ten">
+            <span id="ten1"></span>
+            <br>
+            <label for="">email: </label>
+            <input type="email" id="email" name="email">
+            <span id="email1"></span>
+            <br>
+            <label for="">password: </label>
+            <input type="password" id="mk" name="mk">
+            <span id="mk1"></span>
+            <br>
+            <label for="">số năm làm việc: </label>
+            <input type="text" id="sonam" name="sonam">
+            <span id="sonam1"></span>
+            <br>
+            <input type="submit" value="gửi" />
+        </div>
+    </form>
+</body>
+<script>
+    function KiemTra() {
+        var ten = document.getElementById('ten');
+        var email = document.getElementById('email');
+        var mk = document.getElementById('mk');
+        var sonam = document.getElementById('sonam');
+        var re = new RegExp("\\w+@\\w+(\\.\\w+){1,2}", "g");
+
+        if (ten.value.length == 0) {
+            ten.style.border = "1px solid red";
+            document.getElementById('ten1').innerHTML = "không được để trống tên";
+        } else {
+            document.getElementById('ten1').innerHTML = "";
+        }
+
+
+        if (email.value.length == 0) {
+            email.style.border = "1px solid red";
+            document.getElementById('email1').innerHTML = "không được để trống email";
+        } else if (!email.value.match(re)) {
+            email.style.border = "1px solid red";
+            document.getElementById('email1').innerHTML = "email không hợp lệ";
+        } else {
+            document.getElementById('email1').innerHTML = "";
+        }
+
+
+        if (mk.value.length == 0) {
+            mk.style.border = "1px solid red";
+            document.getElementById('mk1').innerHTML = "không được để trống mật khẩu";
+        } else {
+            document.getElementById('mk1').innerHTML = "";
+        }
+
+
+        if (sonam.value.length == 0) {
+            sonam.style.border = "1px solid red";
+            document.getElementById('sonam1').innerHTML = "không được để trống số năm làm việc";
+        } else if (isNaN(sonam.value)) {
+            sonam.style.border = "1px solid red";
+            document.getElementById('sonam1').innerHTML = "số năm làm việc phải là số";
+        } else {
+            document.getElementById('sonam1').innerHTML = "";
+        }
+
+        return false;
+    }
+</script>
+
+</html>

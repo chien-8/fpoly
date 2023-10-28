@@ -1,0 +1,42 @@
+admin: quản lý danh mục, block món ăn,quản lý media
+
+website: giao diện đẹp
+
+
+vite
+react-router-dom
+
+
+{/* <div className="side-menu">
+                <div className="brand-name">
+                    <h1>Brand</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="">Dashboard</a></li>
+                        <li><Link to="/admin/list">Table</Link></li>
+                        <li><a href="">Help</a></li>
+                        <li><a href="">Settings</a></li>
+                        <li><a href="">Dashboard</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div className="containerAdmin">
+                <div className="header">
+                    <div className="nav">
+                        <div className="search">
+                            <input type="text" placeholder="Search..." />
+                            <button type="submit"><img src="" alt=""/>Tìm kiếm</button>
+                        </div>
+                        <div className="user">
+                            <a href="/admin/add" className="btn">Add new</a>
+                            <img src="" alt=""/>
+                            <div className="user-case">
+                                <img src="" alt=""/>
+                                <button><a href="">Account</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <Outlet/>
+            </div> */}

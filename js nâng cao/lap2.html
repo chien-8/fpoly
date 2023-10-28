@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- bài 2 -->
+    <h2>bài 2</h2>
+    <div>
+        <label>subject name</label>
+        <input type="text" name="String" value="" id="subject_name" />
+    </div>
+    <label>point</label>
+    <input type="number" name="Number" id="point" />
+    </div>
+    <input type="button" value="add" onclick="add()">
+    <p id="student_name"></p>
+    <p id="student_age"></p>
+    <p id="student_address"></p>
+    <p>Subjects:</p>
+    <ul id="subjects">
+
+    </ul>
+    <!-- bài 4 -->
+    <h2>bài 4</h2>
+    <form>
+        1st Person name<input type="text" id="name1"><br>
+        1st Person age<input type="text" id="age1"><br>
+        1st Person address<input type="text" id="address1"><br>
+        2st Person name<input type="text" id="name2"><br>
+        2st Person age<input type="text" id="age2"><br>
+        2st Person address<input type="text" id="name2"><br>
+        <button type="submit" onclick="show1()">show profile</button>
+    </form>
+    <div class="show"></div>
+    <!-- bài 5 -->
+
+    <h2>bài 5</h2>
+    <h3>order list</h3>
+    tên món ăn<br>
+    <input type="text" id="tenmon"><br>
+    số lượng<br>
+    <input type="text" id="soluong"><br>
+    loại đồ ăn<br>
+    <select id="loai">
+        <option value="0"></option>
+        <option value="tráng miệng">tráng miệng</option>
+        <option value="đồ nước">đồ nước</option>
+        <option value="đồ chấm">đồ chấm</option>
+        <option value="đồ uống">đồ uống</option>
+
+    </select>
+    <br>
+    <button onclick="showproduct()">thêm mới</button>
+    <div>
+        <table border="1" style="width: 30%;">
+            <thead>
+                <tr>
+                    <td>STT</td>
+                    <td>tên món ăn</td>
+                    <td>số lượng</td>
+                    <td>loại đồ ăn</td>
+                    <td>hết hàng</td>
+                </tr>
+            </thead>
+            <tbody id="listproduct">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // bài 1
+
+        const sinhvien = {
+            id: "chiến",
+            fullname: "tạ minh chiến",
+            email: "chientmph16045@fpt.edu.vn",
+            avatar: "",
+            address: "nam định",
+            study_major: "",
+            avgScore: "7",
+            getAvgScore() {
+                return this.avgScore;
+            },
+            setAvgScore(point) {
+                point = 10;
+                return this.avgScore = point;
+            },
+            changeAddress(address) {
+                address = "hà nội";
+                return this.address = address;
+            }
+        };
+        console.log(sinhvien);
+        console.log(sinhvien.getAvgScore());
+        console.log(sinhvien.setAvgScore());
+        console.log(sinhvien.changeAddress());
+        // bài 2
+
+        var student = {
+            name: 'nguyễn văn a',
+            age: 20,
+            address: 'Ha Nội',
+            subjects: [
+                {
+                    name: 'javascript',
+                    point: 8
+                }
+
+            ]
+        };
+        document.querySelector("#student_name").innerHTML = student.name;
+        document.querySelector("#student_age").innerHTML = student.age;
+        document.querySelector("#student_address").innerHTML = student.address;
+        var Subjects = student.subjects;
+        document.querySelector("#subjects").innerHTML = Subjects.map(getFull);
+        function getFull(item) {
+            return `<li>${item.name} - ${item.point}</li>`;
+        }
+        function add() {
+            var subject_name = document.querySelector("#subject_name");
+            var point = document.querySelector("#point");
+
+            var them = {
+                name: subject_name.value,
+                point: point.value
+            };
+            Subjects.push(them);
+            document.querySelector("#subjects").innerHTML = Subjects.map(getFull2);
+            function getFull2(item2) {
+                return [`<li>${item2.name} - ${item2.point}</li>`].join("");
+            }
+        }
+
+
+
+        // bài 3
+        function Student(Name, Age, Address, Phone, Birthday, Subject = { name, teacher, point, year }) {
+            this.name = Name;
+            this.age = Age;
+            this.Address = Address;
+            this.Phone = Phone;
+            this.Birthday = Birthday;
+            this.Subject = Subject;
+        }
+        var StudentPoly = new Student('chien', '20', 'nam dinh', '12324', '15/11/02', [{name:"a",teacher:"b",point:"c",year:2022}]);
+        console.log(StudentPoly);
+
+
+
+        // bài 4
+
+        function Person(Name, Age, Address) {
+            this.Name = Name;
+            this.Age = Age;
+            this.Address = Address;
+            this.showProfile = function () {
+                return `<li>name: ${this.Name} - age: ${this.Age} - address: ${this.Address}</li>`;
+            }
+        }
+        const FirstPerson = new Person("ta minh chien", 20, "nam định");
+        const SecondPerson = new Person("ta minh chien", 20, "nam định")
+        function show1() {
+        var name1 = document.getElementById("name1");
+        var age1 = document.getElementById("age1");
+        var address1 = document.getElementById("address1");
+        var name2 = document.getElementById("name2");
+        var age2 = document.getElementById("age2");
+        var address2 = document.getElementById("address2"); 
+            if (name1.value.length == 0 || age1.value.length == 0 || address1.value.length == 0 || name2.value.length == 0 || age2.value.length == 0 || address2.value.length == 0) {
+                alert("Yêu cầu nhập đầy đủ thông tin");
+            }
+            else {
+                const FirstPerson = {
+                    Name: name1.value,
+                    Age: age1.value,
+                    Address: address1.value
+                };
+                const SecondPerson = {
+                    Name: name2.value,
+                    Age: age2.value,
+                    Address: address2.value
+                };
+                const list = [];
+                list.push(FirstPerson, SecondPerson);
+                document.getElementsByClassName("show").innerHTML = list.map(getfull3)
+                function getfull3(item) {
+                    return `<li>name: ${item.name} - age: ${item.age} - address: ${item.address}</li>`;
+                }
+            }
+        }
+
+        
+        // bài 5
+        var data = [
+            { id: 1, tenmon: "bánh pancake", soluong: 10, loai: "tráng miệng" },
+            { id: 2, tenmon: "phở bò", soluong: 100, loai: "đồ nước" },
+            { id: 3, tenmon: "bún chả", soluong: 0, loai: "đồ chấm" },
+            { id: 4, tenmon: "nước hoa quả", soluong: 10, loai: "đồ uống" }
+        ];
+        document.getElementById("listproduct").innerHTML = data.map(getfull);
+        function getfull(item3) {
+
+            return [`
+                <tr>
+                    <td>${item3.id}</td>
+                    <td>${item3.tenmon}</td>
+                    <td>${item3.soluong}</td>
+                    <td>${item3.loai}</td>
+                    <td><input type="checkbox"></td>
+                </tr>`].join("");
+                
+        }
+        function showproduct() {
+            var tenmon = document.getElementById("tenmon");
+            var soluong = document.getElementById("soluong");
+            var loai = document.getElementById("loai");
+            if (tenmon.value.length == 0 || soluong.value.length == 0 || loai.value == 0) {
+                confirm("vu9i long nhap đày dủ thông tin!");
+                return false;
+            }
+            var them1 = {
+                id: "",
+                tenmon: tenmon.value,
+                soluong: soluong.value,
+                loai: loai.value
+
+            };
+            data.push(them1);
+            document.getElementById("listproduct").innerHTML = data.map(getfull1);
+            function getfull1(item4) {
+                return [`
+                <tr>
+                    <td>${item4.id}</td>
+                    <td>${item4.tenmon}</td>
+                    <td>${item4.soluong}</td>
+                    <td>${item4.loai}</td>
+                    <td><input type="checkbox"></td>
+                </tr>`].join("");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

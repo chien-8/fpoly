@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js.js"></script>
+    <style>
+        .error {
+            font-size: 12px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="body">
+        <div id="bang">
+            <h2>Đătj hàng</h2>
+            <div class="form">
+                <form onsubmit="return KiemTra()">
+                    <div class="nhom">
+                        <div>
+                            <lable>Số lượng</lable>
+                            <input type="text" id="sl" class="dieukhien">
+                        </div>
+                        <div id="error1" class="error"></div>
+                    </div>
+
+                    <div class="nhom">
+                        <div>
+                            <lable>Sản phẩm</lable>
+                            <input type="text" id="sanpham" class="dieukhien">
+                        </div>
+                        <div id="error2" class="error"></div>
+                    </div>
+                    <div class="nhom">
+
+                        <div><label>Loại</label>
+                            <select class="dieukhien" id="loai">
+                                <option value="0"></option>
+                                <option value="1">Loại 1</option>
+                                <option value="2">Loại 2</option>
+                                <option value="3">Loại 3</option>
+                            </select>
+                        </div>
+                        <div id="error6" class="error"></div>
+                    </div>
+                    <div class="nhom">
+                        <div>
+                            <lable>Đơn giá</lable>
+                            <input type="text" id="dongia" class="dieukhien">
+                        </div>
+
+                        <div id="error3" class="error"></div>
+                    </div>
+                    <div class="nhom">
+
+                        <legend>Nơi nhận hàng</legend>
+
+                        <input type="radio" name="nhanhang" value="in" onchange="show(this)">
+                        <span>Nội thành</span>
+                        <input type="radio" name="nhanhang" value="out" onchange="show(this)">
+                        <span>Ngoại thành</span>
+                        <div id="nt1" style="display: none;">
+                            <label for=""> Phí vận chuyển</label>
+                            <input type="text" id="fee" value="100000">
+                        </div>
+
+                        <div id="error4" class="error"></div>
+
+                    </div>
+
+
+
+                    <button id="btn" type="submit" onclick="hienthi()">đặt mua</button>
+                    <div id="kq"></div><br>
+                    <div id="kq1"></div><br>
+                    <div id="kq2"></div><br>
+                    <div id="kq3"></div>
+                </form>
+
+
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+
+
+</html>

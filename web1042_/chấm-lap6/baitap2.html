@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" onsubmit="return KiemTra()" id="form">
+        <label >Email: </label>
+        <input type="email" id="email" name="email" onblur="check_email();">
+        <span id="email1"></span>
+
+        <br>
+        <label >số dt: </label>
+        <input type="text" name="number" id="number" onblur="check_sdt();">
+        <span id="sodt"></span>
+
+        <br>
+        <label >CMND: </label>
+        <input type="text" id="number2" name="number2" onblur="check_cmnd();">
+        <span id="cmnd"></span>
+        
+        <br>
+        <input type="submit" value="register" />
+    </form>
+    <script>
+        
+
+
+            function check_email() {
+                var email = document.getElementById('email').value;
+                var check_erro_email = document.getElementById('email1');
+                var regexEmail = /\b[A-Z0-9._%+-]+@(?:[A-Z0-9-]+\.)+[A-Z]{2,6}\b/i;
+                if (email == "") {
+                    check_erro_email.innerHTML = "Email không được để trống";
+
+                } else if (!regexEmail.test(email)) {
+                    check_erro_email.innerHTML = "Email không hợp lệ";
+                } else {
+                    check_erro_email.innerHTML = "hợp lệ";
+                    return email;
+                }
+
+            }
+            function check_sdt() {
+                var sdt = document.getElementById('number').value;
+                var check_erro_sdt = document.getElementById('sodt');
+                var regexSdt = /^\+?\d{1,3}?[- .]?\(?(?:\d{2,3})\)?[- .]?\d\d\d[- .]?\d\d\d\d$/;
+                if (sdt == "") {
+                    check_erro_sdt.innerHTML = "số điện thoại không được để trống";
+                } else if (!regexSdt.test(sdt)) {
+                    check_erro_sdt.innerHTML = "số điện thoại không hợp lệ";
+                } else {
+                    check_erro_sdt.innerHTML = "hợp lệ";
+                    return sdt;
+                }
+            }
+            function check_cmnd() {
+                var cmnd = document.getElementById('number2').value;
+                var check_erro_cmnd = document.getElementById('cmnd');
+                var regexCmnd = /^\+?\d{1,3}?[- .]?\(?(?:\d{2,3})\)?[- .]?\d\d\d[- .]?\d\d\d\d$/;
+                if (cmnd == "") {
+                    check_erro_cmnd.innerHTML = "số cmnd không được để trống";
+                } else if (isNaN(cmnd)) {
+                    check_erro_cmnd.innerHTML="số cmnd phải là số";
+                
+                }else if(!regexCmnd.test(cmnd)){
+                    check_erro_cmnd.innerHTML="số cmnd không hợp lệ";
+                }else{
+                    check_erro_cmnd.innerHTML="hợp lệ";
+                }
+            }
+        
+    </script>
+     
+    
+</body>
+</html>

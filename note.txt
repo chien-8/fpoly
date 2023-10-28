@@ -1,0 +1,20 @@
+npm i mongoose
+promist
+npm init -y
+npm i express mongoose
+
+
+
+npm init -y
+npm i express
+npm i --save-dev nodemon             "start": "nodemon ./src/app.js --exec babel-node -e js"
+npm i cors
+npm i --save-dev nodemon babel-cli babel-preset-env babel-preset-stage-0
+nếu lỗi babel node: npm i -g babel-cli
+sau đó tạo file .babelrc 
+{
+    "presets": ["env", "stage-0"]
+}
+
+npm i --save-dev morgan
+npm i mongoose

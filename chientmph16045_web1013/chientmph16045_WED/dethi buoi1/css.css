@@ -1,0 +1,95 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+#body{
+    background-color: white;
+    width:980px;
+    height: 1330px;
+    margin: 0 auto;
+}
+#header{
+    margin-left: 490px;
+    margin-top: 20px;
+    height: 100px;
+}
+#menu{
+    
+    height: 37px;
+    background-color: #8e1966;
+}
+#menu ul li{
+    margin-top: 10px;
+    list-style: none;
+    display: inline-block;
+    padding-left: 10px;
+}
+#menu ul li a{
+    text-decoration: none;
+    margin-top: 5px ;
+    color: white;
+    display: block;
+    line-height: 10px;
+}
+#menu ul li a:hover{
+    color: red;
+    text-decoration: underline;
+}
+#menu form{
+    list-style: none;
+    display: inline-block;
+    padding-left: 90px;
+}
+.banner{
+    margin-top: 10px;
+}
+#noidung{
+    height: 873px;
+    
+}
+#noidung h3{
+    margin: 15px 0;
+    text-decoration: none;
+    text-align: center;
+    color: blue;
+    text-transform: uppercase;
+}
+.noidung1{
+    float: left;
+    margin-top: 20px;
+    width: 245px;
+    height: 318px;
+}
+.noidung1 a{
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: none;
+    display: block;
+}
+.noidung1 h4 {
+    margin-top: 10px;
+    text-align: center;
+    color: chocolate;
+}
+.noidung1 h4:hover{
+    color: yellow;
+}
+.noidung1 button{
+    margin-top: 10px;
+    margin-left: 80px;
+    color: white;
+    background-color: darkblue;
+    size: 30px;
+}
+.noidung1 img{
+    margin-left: 70px;
+}
+
+
+
+#footer{
+    background-color: #8e1966;
+    text-align: center;
+    height: 52px;
+}
+#footer p{
+    padding: 15px;
+    color: white;
+}

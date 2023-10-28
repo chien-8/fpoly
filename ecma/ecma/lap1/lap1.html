@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="button" value="show" onclick="showProducts()" id="show"><br>
+    <form id="">
+        <input type="button" value="add" onclick="addProduct()" id="add">
+        <input type="text" id="addpro">
+    </form>
+    <form id="">
+        <input type="button" value="remove" onclick="removeProduct()" id="remove">
+        <input type="text" id="removepro">
+    </form>
+    <form>
+        <input type="button" value="update" onclick="updateProduct()" id="update">
+        <input type="text" id="updatepro">
+        <input type="text" id="">
+    </form>
+    
+    <p id="demo"></p>
+    
+    <script>
+        const products = ['mercedes', 'audi', 'ford', 'lamborghini'];
+        function showProducts() {
+            if (products.length == 0) {
+                document.getElementById("demo").innerHTML = "không có sản phẩm để hiển thị";
+            } else {
+                document.getElementById("demo").innerHTML = products.toString();
+            }
+
+        };
+        function addProduct() {
+            var addpro = document.getElementById("addpro").value;
+            let kt = products.some(a => a == addpro);
+            if(addpro.length < 5  ){
+                document.getElementById("demo").innerHTML = "vui lòng nhập lại";
+            }else if (kt == false) {
+                console.log(kt);
+                products.push(addpro);
+                document.getElementById("demo").innerHTML = products;
+            } else {
+                document.getElementById("demo").innerHTML = "đã có sản phẩm trong mảng";
+            }
+        };
+        function removeProduct() {
+            var removepro = document.getElementById("removepro").value;
+            let kt = products.some(a => a == removepro);
+            if(kt ==true){
+                products.splice(products.indexOf(removepro),1);
+                document.getElementById("demo").innerHTML = products;
+            }else{
+                document.getElementById("demo").innerHTML = "không tìm thấy sản phẩm cần xóa";
+            }
+        };
+        function updateProduct(){
+            var updatepro = document.getElementById("updatepro").value;
+            var sua = document.getElementById("sua").value;
+            let kt = products.some(a => a == updatepro);
+            if(kt ==true){
+                
+                document.getElementById("sua").innerHTML = +updatepro;
+            }else{
+                document.getElementById("demo").innerHTML = "không tìm thấy sản phẩm cần sửa";
+            }
+        }
+
+    </script>
+</body>
+
+</html>

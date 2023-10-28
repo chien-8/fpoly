@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        
+
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            background-color: white;
+        }
+
+        header {
+            display: unset;
+            height: 200px;
+
+        }
+
+        .dau img {
+            float: left;
+            display: unset;
+            margin-left: 30px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        nav {
+            margin-left: 1000px;
+        }
+
+        nav ul li {
+            display: unset;
+            float: left;
+            margin-top: 45px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            margin-left: 60px;
+            color: black;
+            font-family: 'Roboto';
+        }
+
+        nav ul li a:hover {
+            color: red;
+        }
+
+        section {
+            text-align: center;
+        }
+
+        main {
+            display: block;
+        }
+
+        .nd {
+            display: flex;
+            float: left;
+            margin-top: 30px;
+            overflow: hidden;
+        }
+
+        .trai {
+            display: block;
+            float: left;
+            width: 600px;
+            margin-left: 35px;
+            height: 457px;
+
+        }
+
+        .trai h2 {
+            margin-top: 30px;
+            font-family: 'Roboto';
+        }
+
+        .trai p {
+            margin-top: 30px;
+            font-family: 'Roboto';
+        }
+
+        .trai button {
+            margin-top: 30px;
+            color: white;
+            background-color: tomato;
+            width: 100px;
+            height: 50px;
+            box-sizing: 3px;
+        }
+
+        .nd img {
+            float: right;
+            margin-left: 120px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease-out;
+        }
+
+        .nd a:hover img {
+            transform: scale(1.1);
+
+        }
+
+        .cuoi {
+
+            margin-top: 100px;
+            display: unset;
+            background-color: rgb(70, 70, 201);
+            height: 200px;
+        }
+
+        footer img {
+            background-color: blue;
+            display: unset;
+            float: left;
+        }
+
+        footer input {
+            height: 50px;
+        }
+
+        .form {
+            margin-left: 1050px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="dau">
+            <a href="#">
+                <img src="img/logo1.png">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">Facilities</a></li>
+                    <li><a href="#">Rooms</a></li>
+                    <li><a href="#">Contact-us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section>
+            <img src="img/banner.jpg">
+        </section>
+        <main class="main">
+            <article class="nd">
+                <div class="trai">
+                    <h2>Lorem Ipsum</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the
+                        industry's standard dummy text</p>
+                    <button>EXPLORE</button>
+                </div>
+                <a href="#"><img src="img/img1.jpg"></a>
+            </article>
+            <article class="nd">
+                <div class="trai">
+                    <h2>Lorem Ipsum</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the
+                        industry's standard dummy text</p>
+                    <button>EXPLORE</button>
+                </div>
+                <a href="#"><img src="img/img2.jpg"></a>
+            </article>
+        </main>
+        <div class="cuoi">
+            <footer>
+                <img src="img/logo2.png">
+                <form class="form">
+                    <input type="email" placeholder="Email Address" required>
+                    <input type="submit" value="send">
+                </form>
+            </footer>
+        </div>
+    </div>
+</body>
+
+</html>

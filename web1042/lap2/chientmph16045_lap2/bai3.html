@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var fullname = prompt("mời nhập tên của bạn");
+        var points = prompt("mời điểm trung bình của bạn");
+        fullname = fullname.toUpperCase();
+        document.write("tên sinh viên là:" + fullname + "<br>");
+        if (points < 5) {
+            document.write( points + ":bạn đã rớt" + "<br>");  // Xuất Rớt
+        }
+        else {
+            document.write( points + ":bạn đã đậu" + "<br>"); // Xuất Đậu
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>đăng nhập</h2>
+    <form action="" onsubmit="return KiemTra()" id="form">
+        <label >tên: </label>
+        <input type="text" id="ten" name="ten" onblur="check_ten();">
+        <span id="ten1"></span>
+        <br>
+        <label >mật khẩu: </label>
+        <input type="password" name="mk" id="mk" onblur="check_mk();">
+        <span id="mk1"></span>
+        <br>
+        <input type="submit" value="register">
+    </form>
+</body>
+<script>
+    function check_ten(){
+        var ten=document.getElementById('ten').value;
+        var check_ten=document.getElementById('ten1');
+        if(ten==""){
+            check_ten.innerHTML="ten không được để trống";
+        }else if(ten.length<6){
+            check_ten.innerHTML="tên ko hợp lệ";
+        }else{
+            check_ten.innerHTML="hợp lệ";
+            return ten;
+        }
+    }
+    function check_mk(){
+        var mk=document.getElementById('mk').value;
+        var check_mk=document.getElementById('mk1');
+        if(mk==""){
+            check_mk.innerHTML="mk không được để trống";
+        }else if(mk.length<11){
+            check_mk.innerHTML="mk ko hợp lệ";
+        }else{
+            check_mk.innerHTML="hợp lệ";
+            return mk;
+        }
+    }
+</script>
+</html>

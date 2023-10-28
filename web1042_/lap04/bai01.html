@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="thongtin.hienthi();">Hiển thị</button>
+    <script>
+        var thongtin=new Object();
+        thongtin.hoten=prompt("họ và tên: ");
+        thongtin.manv=prompt("nhap ma: ");
+        thongtin.luong=prompt("nhap luong: ");
+        thongtin.thuong=prompt("nhap số tiền thưởng:");
+        thongtin.hienthi=function(){
+            thongtin.thunhap=Number(this.luong+this.thuong);
+            thongtin.thue;
+            if(this.thunhap>15000000){
+                alert('thue: 15%');
+                this.thue=this.thunhap*(15/100);
+            }else if(9000000<this.thunhap<=15000000){
+                alert('thue: 10%');
+                this.thue=this.thunhap*(10/100);
+            }else{
+                alert('ko tính thuế')
+            }
+            document.write("họ tên: "+this.hoten+"<br>")
+            document.write("mã: "+this.manv+"<br>")
+            document.write("lương: "+this.luong+"<br>")
+            document.write("thưởng: "+this.thuong+"<br>")
+            document.write("lương sau thuế: "+this.thue+"<br>")
+
+           
+        }
+    </script>
+
+</body>
+</html>

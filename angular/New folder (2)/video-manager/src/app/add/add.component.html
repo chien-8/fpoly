@@ -1,0 +1,13 @@
+<form [formGroup]="onadd" (ngSubmit)="onSubmit()">
+    name
+    <input type="text" formControlName="name">
+    image
+    <input type="text" formControlName="image">
+    url
+    <input type="text" formControlName="url">
+    description
+    <input type="text" formControlName="description">
+    view
+    <input type="number" formControlName="view">
+    <button type="submit">Add</button>
+</form>

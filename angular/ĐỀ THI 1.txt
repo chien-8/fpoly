@@ -1,0 +1,45 @@
+ĐỀ THI 1
+(Thời gian: 60’)
+Sử dụng các câu lệnh sau đây để cài đặt: 
+·         môi trường: npm install -g @angular/cli
+·         dự án: ng new video-manager
+1.    Tạo video theo Schema sau :
+·          _id: number
+·          name: string, required, maxLength: 255, minLength: 6
+·          image: string, required 
+·          url: number, required
+·          description: string
+·          view_number: number
+2.    Tạo Router và sử dụng bootstrap/tailwindcss hoặc tự CSS để xây dựng giao diện (1 điểm)
+·         Router:
+o	Thống kê - /dashboard
+o    Danh sách video - /videos
+o    Thêm video - /videos/add
+o    Cập nhật video - /videos/:id/edit
+·         Giao diện: 1 điểm
+3.            Thống kê video : ( 1 điểm )
+·         Hiển thị số lượng view của mỗi video
+4.            Chức năng hiển thị danh sách video: (2 điểm)
+·         Hiển thị danh sách theo dạng table : 1 điểm
+·         Xóa video có confirm trước khi xóa : 0.5 điểm
+·         Thông báo sau khi xóa thành công: 0.5 điểm
+·         Yêu cầu hiển thị đầy đủ các field ( bắt buộc )
+
+
+5.            Chức năng thêm video  (2 điểm)
+·         Thêm thành công:  1 điểm
+·         Validate form : 0.5 điểm
+·         Thông báo sau khi thêm thành công: 0.5 điểm
+·         Chuyển trang sau list khi thêm thành công ( bắt buộc )
+6.            Chức năng cập nhật video ( 2 điểm )
+·         Cập nhật thành công:  1 điểm
+·         Validate form : 0.5 điểm 
+·         Thông báo sau khi cập nhật thành công : 0.5 điểm 
+·         Chuyển trang sau khi cập nhật thành công ( bắt buộc )
+7.            Chức năng đăng ký, đăng nhâp tài khoản ( 2 điểm )
+·         Đăng ký, đăng nhập thành công:  1 điểm
+·         Thông báo sau khi đăng ký/đăng nhập thành công: 0.5 điểm
+·         Validate form : 0.5 điểm
+·         Đăng nhập xong chuyển về về trang chủ ( bắt buộc )
+ 
+Ghi chú: Project đã có thư viện axios, json-server, json-server-auth. Không cho phép mở các bài thực hành cũ

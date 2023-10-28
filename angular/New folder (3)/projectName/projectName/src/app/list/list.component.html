@@ -1,0 +1,27 @@
+<p>list works!</p>
+<div>
+    <a routerLink="add">add</a>
+    <table>
+        <thead>
+            <tr>
+                <td>id</td>
+                <td>name</td>
+                <td>price</td>
+                <td>description</td>
+                <td>action</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of data">
+                <td>{{p.id}}</td>
+                <td>{{p.name}}</td>
+                <td>{{p.price}}</td>
+                <td>{{p.descriprion}}</td>
+                <td>
+                    <button (click)="remove(p.id)">remove</button>
+                    <button routerLink="update/{{p.id}}">update</button>
+                </td>
+            </tr>
+        </tbody> 
+    </table>
+</div>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a = prompt("Nhap vao day gia tri cua a: ");
+        var b = prompt("Nhap vao day gia tri cua b: ");
+        var c = prompt("Nhap vao day gia tri cua c: ");
+        var Delta = Math.pow(b, 2) - 4 * a * c;
+        var nghiemPtX;
+        var nghiemPtX1;
+        var nghiemPtX2;
+        Delta = parseFloat(Delta);
+        nghiemPtX = parseFloat(nghiemPtX);
+        nghiemPtX1 = parseFloat(nghiemPtX1);
+        nghiemPtX2 = parseFloat(nghiemPtX2);
+        if (a == 0) {
+            if (b == 0) {
+                document.write("Phuong trinh vo nghiem " + "<br>");
+            } else {
+                nghiemPtX = -c / b;
+                document.write("Phuong trinh co 1 nghiem:" + nghiemPtX + "<br>");
+            }
+        } else {
+            if (Delta > 0) {
+                nghiemPtX1 =  ((-b + Math.sqrt(Delta)) / (2 * a));
+                nghiemPtX2 =  ((-b - Math.sqrt(Delta)) / (2 * a));
+                document.write("Phuong trinh co nghiem: x1 = " + nghiemPtX1 + "<br>");
+                document.write("Phuong trinh co nghiem: x2 = " + nghiemPtX2 + "<br>");
+            } else if (Delta == 0) {
+                nghiemPtX1 = -b / (2 * a);
+                document.write("Phuong trinh co nghiem kep x1 = x2 = " + nghiemPtX1 + "<br>");
+            } else {
+                document.write("Phuong trinh vo nghiem "+"<br>");
+            }
+        }
+
+    </script>
+</body>
+</html>

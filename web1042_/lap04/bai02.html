@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Số a <input type="text" v-model="a"> <br>
+    Số b <input type="text" v-model="b"><br>
+    <br>tổng: <input type="text" name="tong" value="">
+    <br>hiệu: <input type="text" name="tich" value="">
+    <br><input type="button" value="giai" onclick="giai(this.form)">
+    <script>
+        function giai(form){
+            var a,b;
+            var tong,tich;
+            a = parseInt(form.a.value);
+            b = parseInt(form.b.value);
+            this.tong =a+b;
+            this.tich =a*b;
+        }
+
+    </script>
+</body>
+</html>

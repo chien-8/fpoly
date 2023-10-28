@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //viết hàm tính tổng 2 số, sau đó gọi hàm tính tổng 2 số 2,5
+        // sau khi in ra tổng hỏi người dùng muốn tính chu vi hình CN
+        // hay không/ nếu có thì nhập cạnh dài cạnh rộng r tính. nếu không thì chào tạm biệt
+
+        function Tong(a,b){
+            var x= Number(a);
+            var y=Number(b);
+            return(x+y);
+        }
+        //tính tổng 2 số
+        var z= Tong(2,5);  alert(z);
+        var kt= confirm("ban co muôn tinh chu vi hcn không?");
+        if(kt==true){
+            //nhập cạnh
+            var canh_dai=prompt("nhap chiều dài:");
+            var canh_rong=prompt("nhap chiều rong:");
+            var p=Tong(canh_dai,canh_rong)*2;
+            alert("chu vi="+p);
+        }else{
+            alert("tạm biệt")
+        }
+
+    </script>
+</body>
+</html>

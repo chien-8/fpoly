@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        Số a <input type="text" v-model="soa"> <br>
+        Số b <input type="text" v-model="sob"><br>
+        Kết quả:<span>{{ketqua}}</span><br> 
+        <button v-on:click="tong">Tổng</button><br>
+        <button v-on:click="hieu">Hiệu</button> 
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var options={
+            el:"#app",
+            data:{
+                soa:"",
+                sob:"",
+                ketqua:""
+            },
+            methods:{
+                tong:function(){
+                    this.ketqua=Number(this.soa)+Number(this.sob);
+                },
+                hieu:function(){
+                    this.ketqua=Number(this.soa)-Number(this.sob);
+                }
+            }
+        }
+        var app=new Vue(options);
+    </script>
+</body>
+</html>

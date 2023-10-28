@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: auto;
+            background-color: white;
+        }
+
+        section {
+            text-align: center;
+        }
+
+        header {
+            text-align: center;
+            display: block;
+            margin-bottom: 50px;
+        }
+
+        header a {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        header nav {
+            margin-right: -10px;
+        }
+
+        header ul li {
+            display: unset;
+        }
+
+        header ul li a {
+            text-decoration: none;
+            display: unset;
+            margin-left: 10px;
+        }
+
+        .tren {
+            display: unset;
+            margin-bottom: 30px;
+        }
+
+        .tren img {
+            margin-left: 200px;
+        }
+
+        .nd1 {
+            display: block;
+            float: left;
+            width: 500px;
+            margin-left: 50px;
+        }
+
+        .nd1 h1 {
+            margin-top: 200px;
+            margin-bottom: 20px;
+        }
+
+        .nd1 p {
+            margin-bottom: 20px;
+        }
+
+        .nd1 button {
+            width: 100px;
+            height: 50px;
+            background-color: rgb(233, 230, 53);
+            color: white;
+        }
+
+        .nd1 button:hover {
+            background-color: tomato;
+        }
+
+        .chu {
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .duoi {
+            display: unset;
+            height: 676px;
+        }
+
+        .nd3 {
+            float: left;
+            display: grid;
+            margin-left: 30px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .nd3 h3 {
+            margin-top: 20px;
+        }
+        .nd3 button {
+            height: 30px;
+            margin-top: 20px;
+            color: white;
+            background-color: rgb(5, 59, 1);
+            margin-bottom: 30px;
+        }
+
+        .nd3 {
+            height: 546px;
+            overflow: hidden; 
+        }
+
+        .nd3 img {
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nd3:hover img {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+
+        .nd3 a {
+            position: relative;
+            display: block;
+
+        }
+
+        .nd3 a:hover .name {
+            bottom: 0%;
+            opacity: 1;
+            background-color: white;
+            width: 448px;
+            display: grid;
+        }
+
+        .name {
+            position: absolute;
+            font-weight: bold;
+            bottom: 0px;
+            left: 50%;
+            text-transform: uppercase;
+            transform: translatex(-50%);
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+        }
+
+        footer {
+            clear: both;
+            background-color: rgb(130, 146, 235);
+            height: 100px;
+        }
+
+        footer p {
+            display: unset;
+            margin-top: 45px;
+            margin-left: 30px;
+            float: left;
+        }
+
+        footer input {
+            margin-top: 45px;
+            float: left;
+        }
+
+        .cuoi {
+            margin-left: 1050px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section>
+            <img src="img/banner.jpg">
+        </section>
+        <header>
+            <a href="#">
+                <img src="img/logo.png">
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Destinations</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Landing</a></li>
+                    <li><a href="#">Shop</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="tren">
+            <article class="nd1">
+                <h1>EXPLORING THE SUBURB<br> SINCE 2019</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididu nt ut labore
+                    et dolore labore et dolore.</p>
+                <button>Read more</button>
+            </article>
+            <img src="img/img1.jpg">
+        </main>
+        <h2 class="chu">FEATURED BLOG POSTS</h2>
+        <main class="duoi">
+            <article class="nd3">
+                <a href="#">
+                    <img src="img/trip1.jpg">
+                    <div class="name">
+                        <h3>BANFF NATIONAL PARK</h3>
+                        <h3>$546.00</h3>
+                        <button>Book this tour</button>
+                    </div>
+                </a>
+
+            </article>
+            <article class="nd3">
+                <a href="#">
+                    <img src="img/trip2.jpg">
+                    
+                </a>
+            </article>
+            <article class="nd3">
+                <a href="#">
+                    <img src="img/trip3.jpg">
+                    
+                </a>
+            </article>
+        </main>
+
+
+
+        <footer>
+            <p>© 2021 Qode Interactive, All Rights Reserved</p>
+            <form>
+                <input type="email" required placeholder="email address" class="cuoi">
+                <input type="submit" value="send">
+            </form>
+        </footer>
+    </div>
+</body>
+
+</html>

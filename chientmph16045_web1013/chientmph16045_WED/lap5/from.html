@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css.css" rel="stylesheet">
+</head>
+<body>
+    <form>
+        <div class="nhom">
+            <div><label>Họ và tên</label></div>
+            <input type="text" name="textbox" class="dieukhien">
+        </div>
+        <div class="nhom">
+            <fieldset>
+            <legend>Giới tính</legend>
+            <input type="radio" name="gender" checked>
+            <label>Nam</label>
+            <input type="radio" name="gender">
+            <label>Nữ</label>
+            </fieldset>
+        </div>
+        <div class="nhom">
+            <div><label>Ngày sinh</label></div>
+            <input type="date">
+        </div>
+        <div class="nhom">
+            <div><label>Điểm</label></div>
+            <input type="number" min="0" max="10">
+        </div>
+        <div>
+            <label>Hình ảnh:</label>
+            <input type="file" name="photo">
+        </div>
+        <div class="nhom">
+            <div><label>QUốc tịch:</label></div>
+            <select name="select" class="dieukhien">
+                <option>Việt Nam</option>
+                <option>Thái lan</option>
+            </select>
+        </div>
+        <div class="nhom">
+            <label>Nghề nghiệp</label>
+            <select name="select" class="dieukhien">
+                <option>sinh viên</option>
+                <option>Giáo viên</option>
+                <option>Công nhân</option>
+                <option>Grap</option>
+                <option>Kỹ sư</option>
+                <option>Trai bao</option>
+            </select>
+        </div>
+        <div class="nhom">
+            <fieldset>
+            <legend>Sở thích</legend>
+            <input type="checkbox" name="checkbox">
+            <label>Thể thao</label>
+            <input type="checkbox" name="checkbox">
+            <label>Du lịch</label>
+            <input type="checkbox" name="checkbox">
+            <label>Âm nhạc</label>
+            <input type="checkbox" name="checkbox">
+            <label>Ẩm thực</label>
+            </fieldset>
+        </div>
+        <div class="nhom">
+            <div>Ghi chú</div>
+            <textarea name="textarea" class="dieukhien"></textarea>
+            <div>
+                <button class="button">Đăng ký</button>
+                <button class="button">Nhập lại</button>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

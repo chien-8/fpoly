@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #anh{
+            width: 500px;
+            height: 400px;
+            margin-left: 300px;
+        }
+        .class{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="class">
+        <img src="img/0.jpg" id="anh" alt="" onclick="changeImage()">
+        <button onclick="stop()" id="nut">stop</button>
+        <button onclick="start()" >start</button>
+    </div>
+</body>
+<script>
+    var index=1;
+    changeImage=function(){
+        var imgs=["img/0.jpg","img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg"];
+        document.getElementById('anh').src=imgs[index];
+        index++;
+        if(index==5){
+            index=0;
+        }
+        setInterval(changeImage,1500);
+    }
+    function start(){
+                x = setInterval(next,1500);
+            }
+            function stop(){
+                clearInterval(x);
+            }
+            var x =setInterval(next,1500);
+</script>
+</html>

@@ -1,0 +1,33 @@
+<p>add works!</p>
+<form [formGroup]="add" (ngSubmit)="onAdd()">
+    name
+    <input type="text" formControlName="name">
+    <div *ngIf="!name?.valid && name?.touched">
+        <span *ngIf="name?.errors?.['required']">khong dc de trong</span>
+    </div>
+    <br>
+    image
+    <input type="text" formControlName="image">
+    <div *ngIf="!image?.valid && image?.touched">
+        <span *ngIf="image?.errors?.['required']">khong dc de trong</span>
+    </div>
+    <br>
+    price
+    <input type="number" formControlName="price">
+    <div *ngIf="!price?.valid && price?.touched">
+        <span *ngIf="price?.errors?.['required']">khong dc de trong</span>
+    </div>
+    <br>
+    description
+    <input type="text" formControlName="description">
+    <div *ngIf="!description?.valid && description?.touched">
+        <span *ngIf="description?.errors?.['required']">khong dc de trong</span>
+    </div>
+    <br>
+    author
+    <input type="text" formControlName="author">
+    <div *ngIf="!author?.valid && author?.touched">
+        <span *ngIf="author?.errors?.['required']">khong dc de trong</span>
+    </div><br>
+    <button type="submit" [disabled]="add.invalid">add</button>
+</form>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .error{
+        color: red;
+        font-size:15px ;
+    }
+</style>
+<body>
+    <form id="form">
+        <div>
+            <span>tên</span>
+            <input type="text" id="name">
+            <div class="error"></div>
+        </div>
+        <div>
+            <span>giá</span>
+            <input type="number" id="price">
+            <div class="error"></div>
+        </div>
+        <div>
+            <select id="type">
+                <option value=""></option>
+                <option value="tráng miệng">tráng miệng</option>
+                <option value="đồ uống">đồ uống</option>
+                <option value="súp">súp</option>
+            </select>
+            <div class="error"></div>
+        </div>
+
+        <button type="submit">thêm mới</button>
+    </form>
+    <script src="./add.js"></script>
+</body>
+
+</html>

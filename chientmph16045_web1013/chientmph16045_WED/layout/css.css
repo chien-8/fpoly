@@ -1,0 +1,51 @@
+
+
+/* layout*/
+body{
+    padding: 0px;
+    margin: 0px;
+}
+#layout{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+header{
+    background-image: url(img/media.png);
+    background-repeat:right ;
+    height: 0px;
+    padding-bottom: 25%;
+}
+article{
+    min-height: 400px;
+    width: 75%;
+    background-color: white;
+    float: left;
+}
+aside{
+    min-height: 600px;
+    width: 15%;
+    background-color:red;
+    float: right;
+}
+footer{
+    height: 50px;
+    background-color:red;
+    clear: both;
+
+}
+a{
+    text-decoration: underline;
+    color: white;
+    margin: 0 10px;
+}
+a:hover{
+    color: rgb(255, 0, 0);
+    text-decoration: underline;
+}
+iframe[name=page]{
+    width: 100%;
+    min-height: 400px;
+}
+.menu{
+    height: 41px;background: red;font-size: 12px;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error{
+            color: red;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form">
+        <span>name</span>
+        <input type="text" id="name">
+        <div class="error"></div><br>
+        <span>danh mục</span>
+        <select id="type">
+            <option value=""></option>
+            <option value="iphon">iphon</option>
+            <option value="samsung">samsung</option>
+            <option value="nokia">nokia</option>
+        </select>
+        <div class="error"></div>
+        <span>giá gốc</span>
+        <input type="text" id="price">
+        <div class="error"></div><br>
+        <span>giá sale</span>
+        <input type="text" id="pricesale">
+        <div class="error"></div><br>
+        <select id="danhgia">
+            <option value="">đánh giá</option>
+            <option value="5 sao">5 sao</option>
+            <option value="4 sao">4 sao</option>
+            <option value="3 sao">3 sao</option>
+        </select>
+        <span>mô tả</span>
+        <input type="text" id="description">
+        <div class="error"></div><br>
+        <button type="submit">update</button>
+    </form>
+    <script src="update.js">
+
+    </script>
+</body>
+</html>

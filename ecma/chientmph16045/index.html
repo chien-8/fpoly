@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        tr td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mx-auto">
+        <a class="p-4 bg-red-400 inline-block" href="./add/add.html">thêm mới</a>
+
+        <table class="w-full border border-red-400">
+            <thead>
+                <tr>
+                    <td class="w-[20%]">Tên sản phẩm</td>
+                    <td class="w-[20%]">Danh mục</td>
+                    <td class="w-[20%]">Thương hiệu</td>
+                    <td class="w-[20%]">Hình ảnh</td>
+                    <td class="w-[20%]">Hành động</td>
+                </tr>
+            </thead>
+            <tbody id="table">
+
+            </tbody>
+        </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

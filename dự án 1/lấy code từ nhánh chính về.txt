@@ -1,0 +1,12 @@
+// lấy code từ nhánh chính về
+git pull origin master 
+// đẩy code kèm commit
+git add . 
+commit code
+git push 
+// chập nhánh code
+git merge 
+// lên github -> nhánh master-> pull requests -> new pull requests -> create pull requests -> merge pull request
+
+
+

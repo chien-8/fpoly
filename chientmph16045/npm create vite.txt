@@ -1,0 +1,19 @@
+npm create vite 
+npm i redux
+npm i react-redux
+npm i @reduxjs/toolkit
+npm i react-router-dom
+npm i react-hook-form
+
+
+import {configureStore} from "@reduxjs/toolkit"
+import { productApi } from "./api"
+
+export const store= configureStore({
+    reducer:{
+        [productApi.reducerPath]:productApi.reducer
+    },
+    middleware:(getDefaultMiddleware)=>getDefaultMiddleware().concat(productApi.middleware)
+})
+
+export type AppDispatch =typeof store.dispatch

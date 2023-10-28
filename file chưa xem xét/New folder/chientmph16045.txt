@@ -1,0 +1,71 @@
+create database QLBanHang_chientmph
+go
+USE QLBanHang_chientmph
+GO
+ create table KHACHHANG1(
+    MAKH char(6) not null primary key,
+	HOTEN nvarchar(30) not null,
+	DCHI nvarchar(50) not null,
+	SODT varchar(15),
+	EMAIL varchar(30)
+ )
+ go
+ create table SANPHAM(
+    MASP char(6) not null primary key,
+	TENSP nvarchar(30) not null,
+	SOLUONG int,
+	NUOCSX nvarchar(50),
+	GIA varchar(20)
+ )
+ go
+ create table HOADON(
+    SOHD char(6) not null primary key,
+	NGAYMUA date,
+	MAKH char(6) not null,
+	TRANGTHAI varchar(30),
+	constraint fk_hoadon foreign key(MAKH) references KHACHHANG1(MAKH)
+ )
+ go
+ create table CT_HOADON(
+     SOHD char(6) not null,
+	 MASP char(6) not null,
+	 SLMUA int,
+	 constraint pk_ct_hoadon primary key(SOHD,MASP),
+	 constraint fk_sp_hoadon foreign key(MASP) references SANPHAM(MASP),
+	 constraint fk_hd_hoadon foreign key(SOHD) references HOADON(SOHD)
+)
+go
+
+insert into KHACHHANG1(MAKH,HOTEN,DCHI,SODT,EMAIL) values ('ph01',N'nguyen văn a',N'hà nội','01292318231','a@gmail.com')
+insert into KHACHHANG1(MAKH,HOTEN,DCHI,SODT,EMAIL) values ('ph02',N'nguyen văn anh',N'nam định','0129223439','b@gmail.com')
+insert into KHACHHANG1(MAKH,HOTEN,DCHI,SODT,EMAIL) values ('ph03',N'nguyen văn b',N'cao bằng','01767232139','c@gmail.com')
+insert into KHACHHANG1(MAKH,HOTEN,DCHI,SODT,EMAIL) values ('ph04',N'nguyen thị anh',N'đà nẵng','0190832139','d@gmail.com')
+insert into KHACHHANG1(MAKH,HOTEN,DCHI,SODT,EMAIL) values ('ph05',N'nguyen văn c',N'hà nam','0698798139','e@gmail.com')
+
+insert into SANPHAM(MASP,TENSP,SOLUONG,NUOCSX, GIA) values ('sp001','A',10,N'lao','1000000')
+insert into SANPHAM(MASP,TENSP,SOLUONG,NUOCSX, GIA) values ('sp002','B',20,N'việt nam','2000000')
+insert into SANPHAM(MASP,TENSP,SOLUONG,NUOCSX, GIA) values ('sp003','C',30,N'thái lan','3000000')
+insert into SANPHAM(MASP,TENSP,SOLUONG,NUOCSX, GIA) values ('sp006','D',90,N'trung quốc','4000000')
+insert into SANPHAM(MASP,TENSP,SOLUONG,NUOCSX, GIA) values ('sp005','E',100,N'nhật bản','5000000')
+
+insert into HOADON(SOHD,NGAYMUA,MAKH,TRANGTHAI) values('3','2021/11/02','ph01',N'thanh toán')
+insert into HOADON(SOHD,NGAYMUA,MAKH,TRANGTHAI) values('2','2021/10/03','ph01',N'thanh toán')
+insert into HOADON(SOHD,NGAYMUA,MAKH,TRANGTHAI) values('1','2021/09/04','ph03',N'thanh toán')
+insert into HOADON(SOHD,NGAYMUA,MAKH,TRANGTHAI) values('4','2021/08/05','ph03',N'thanh toán')
+insert into HOADON(SOHD,NGAYMUA,MAKH,TRANGTHAI) values('5','2021/11/06','ph02',N'thanh toán')
+
+-- câu 3
+select MAKH,HOTEN,DCHI,SODT,EMAIL from KHACHHANG1 where HOTEN like N'%anh%'
+
+--câu 4
+
+select MASP,TENSP from  SANPHAM where SOLUONG>=50 and SOLUONG<=100
+
+--câu 5
+select*from SANPHAM where SOLUONG<(select avg(SOLUONG) from SANPHAM)
+--câu 6
+select count(SOHD) N'số lượng',MAKH N'khách hàng' from HOADON group by MAKH
+--câu 7
+update SANPHAM set NUOCSX=N'lào', SOLUONG=210 where MASP='SP001'
+--câu 8
+delete from SANPHAM where MASP='SP006'

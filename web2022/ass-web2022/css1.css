@@ -1,0 +1,303 @@
+
+*{margin: 0;padding: 0;box-sizing: border-box;}
+
+body{
+    width: 100%;
+    background-color: white;
+}
+@media only screen and (max-width: 430px) {
+    .k1{
+        height: 50px ;
+        background-color: black ;
+        
+    }
+    .logo1 img{
+        width: 156px ;
+        height: 50px ;
+        margin-left: 140px ; 
+    }
+    /* .navbar-toggler{
+        margin-top: -60px;
+        position: absolute;
+    } */
+    .phone{
+        display: none ;
+    }
+    
+    .dangky{
+        display: none ;
+        
+    }
+    .thongtin1 h2{
+        color: #F80000 ;
+        text-align: center ;
+        margin-bottom: 20px ;
+        margin-top: 20px ;
+    }
+    #chu1{
+        color: #1905F8 ;
+        font-size: 18px ;
+        padding-left: 20px ;
+    }
+    #so{
+        color: #F80000 ;
+        margin-top: 25px ;
+        font-size: 18px;
+    }
+    .chu2{
+        font-size: 18px ;
+        margin-top: 13px ;
+        text-decoration: none ;
+        color: black ;
+    }
+    .chu3{
+        margin-top: 25px ;
+        font-size: 18px ;
+        margin-left: 40px ;
+    }
+    
+    .thongtinA p{
+        font-size: 18px ;
+    }
+    
+
+    .thongtinB{
+        width: auto ;
+        float: right ;
+        margin-left: 60px ;
+    }
+    #bang1{
+        width: 280px ;
+        height: 87px ;
+        border-radius: 5px ;
+        background-color: #F5A546;color: white ;
+    }
+    #chubang1A{
+        font-size: 25px ;
+        
+        text-align: center ;
+        display: inline-block ;
+    }
+    #chubang1B{
+        font-size: 15px ;
+        text-align: center ;
+    }
+    #bang2{
+        width: 280px ;
+        height: 87px ;
+        border-radius: 5px ;
+        background-color: #5E73E1 ;
+        margin-top: 45px ;
+        color: white ;
+    }
+
+
+    .sanpham{
+        
+        text-align: center;
+    }
+    .noidung1 h2{
+        color: #F80000;
+        text-align: center;
+        margin-bottom: 57px;
+        margin-top: 57px;
+    }
+    .sp1{
+        border: 1px solid #DAD3D3;
+        width: 339px;
+        height: 310px;
+        margin-bottom: 20px;
+        margin-left: 30px;
+    }
+    
+    .tgia{
+        background-color: #DAD3D3;
+        height: 87px;
+        width: auto;
+        margin-top: 28px;
+        text-align: center;
+        font-size: 21px;
+    }
+    #sp{
+        margin-top: 30px;
+        color: black;
+        text-decoration: none;
+    }
+    #gia{
+        margin-top: 15px;
+        color: #F80000;
+    }
+
+    .noidung2 h2{
+        color: #F80000;
+        text-align: center;
+        margin-bottom: 57px;
+        margin-top: 57px;
+    }
+
+/*  footer */
+    .footer{
+        width: auto;
+        height: 90px;
+        background-color: black;
+        margin-top: 74px;
+    }
+    .logo2{
+        float: left;
+        padding: 20px 0px 0px 10px;
+    }
+    .logo2 img{
+        width: 156px;
+        height: 50px;
+        
+    }
+    #gach button{
+        display: none;
+    }
+    .foodter1{
+        display: unset;
+    }
+    #ftchu1{
+        padding-left: 17px;
+        color: white;
+    }
+    #ftchu2{
+        padding-left: 17px;
+        color: white;
+    }
+    .ftchu{
+        margin-top: 20px;
+        font-size: 8px;
+    }
+/* xong footer */
+    
+/* giới thiệu */
+
+    #right video{
+        display: none;
+    }
+    #right ul li {
+        list-style: none;
+        width: auto;
+        display: block;
+        line-height: 50px;
+        clear: left;
+    }
+    #right ul li a{
+        text-decoration: none;
+    }
+
+/* hết giới thiệu */
+
+
+/* sản phẩm */
+.sanphamLeft h2{
+    display: none;
+    
+}
+.sp2{
+    border: 1px solid #DAD3D3;
+    width: 339px;
+    height: 310px;
+    margin-bottom: 40px;
+    margin-left: 33px;
+}
+
+.tgia1{
+    background-color: #DAD3D3;
+    height: 87px;
+    width: auto;
+    margin-top: 28px;
+    text-align: center;
+    font-size: 21px;
+}
+#sp2{
+    margin-top: 30px;
+    color: black;
+    text-decoration: none;
+}
+#gia2{
+    margin-top: 15px;
+    color: #F80000;
+}
+/* hết sản phẩm */
+
+/* tin tức */
+.ndtintuc{
+    
+    margin-bottom: 37px;
+    
+}
+.ndtintuc ul li{
+    list-style: none;
+}
+.ndtintuc ul li img{
+    width: 340px;
+    height: 200px;
+    margin-right: 20px;
+    
+}
+.ndtintuc ul li a{
+    font-size: 21px;
+    text-decoration: none;
+    color: black;    
+    text-transform: initial;
+}
+.ndtintuc ul li a:hover{
+    color: red ;
+}
+.ndtintuc ul li p{
+    padding-top: 7px;
+    
+}
+
+/* hết tin tức */
+
+/* liên hệ */
+     .lienheRight{
+         display: none;
+     }
+     .lienhe1{
+        width: 400px;
+        height: 40px;
+    }
+    .form button{
+        width: 50px;
+        height: 30px;
+        font-size: 18px;
+        color: white;
+        background-color: #F80000
+    }
+    .diachi1{
+        margin-top: 19px;
+    }
+    .khoangcach{
+        margin-bottom: 20px;
+    }
+    
+/* hết liên hệ */
+
+
+.container-fluid{
+     background-color: black;
+
+}
+.menumbl img{
+    width: 156px ;
+    height: 50px ;
+    margin-left: 120px ; 
+    float: right;
+}
+
+.menuweb{
+    display: none;
+}
+.navbar-toggler-icon{
+    background-color: white;
+}
+
+#modau{
+    margin-top: 20px;
+}
+
+}

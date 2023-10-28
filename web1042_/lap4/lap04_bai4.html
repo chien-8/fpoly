@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="button1" value="open" onclick="mo()">Mở cửa sổ mới</button>
+    <button id="button2" value="close" onclick="dong()">Đóng cửa sổ mới</button>
+    <button id="button3" value="check" onclick="kt()">KT cửa sổ đã đóng hay chưa</button>
+    <script>
+        var wd;
+        function mo(){
+            wd=window.open('file:///C:/Users/HI/OneDrive/M%C3%A1y%20t%C3%ADnh/web1042_/lap4/lap04_bai2.html')
+        }
+        function dong(){
+            if(wd.closed==false){
+                wd.close();
+            }
+        }
+        function kt(){
+            if(wd.closed==false){
+                alert('Chưa đóng cửa sổ đang mở')
+                alert('Đóng cửa sổ mới')
+                wd.close();
+            }else{
+                alert('cửa sổ đã được đóng')
+            }
+        }
+    </script>
+</body>
+
+</html>

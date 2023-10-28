@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .error {
+            font-size: 12px;
+            color: red;
+        }
+        table{
+           width: 40%;
+        }
+        select{
+            width: 170px;
+            height: 25px;
+            margin-bottom: 10px;
+        }
+        #error4{
+            margin-bottom: 10px;
+        }
+        button{
+            width: 170px;
+            height: 25px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form">
+
+        <h2>Đăng ký tour</h2>
+        <div class="nhom">
+            <input type="text" id="nameTour" placeholder="Tên tour">
+
+        </div>
+        <div id="error1" class="error"></div>
+        <br>
+        <div class="nhom">
+            <input type="text" id="code" placeholder="Mã tour">
+            <div id="error2" class="error"></div>
+        </div>
+
+        <br>
+        <div class="nhom">
+            <select id="loai">
+                <option value="0">Đơn vị tổ chức</option>
+                <option value="Đơn vị 1">Đơn vị 1</option>
+                <option value="Đơn vị 2">Đơn vị 2</option>
+                <option value="Đơn vị 3">Đơn vị 3</option>
+                <option value="Đơn vị 4">Đơn vị 4</option>
+            </select>
+            <div id="error3" class="error"></div>
+        </div>
+
+        <div class="nhom">
+            <form id="elements" >
+                <input type="radio" id="nam" value="nam" name="gender">
+                Nam
+                <input type="radio" id="nữ" value="nữ" name="gender">
+                Nữ
+                <div id="error4" class="error"></div>
+            </form>
+
+        </div>
+
+        <div class="nhom">
+            <input type="text" id="songuoi" placeholder="Số ngươi đi cùng">
+            <div id="error5" class="error"></div>
+        </div>
+
+        <br>
+        <button onclick="hienthi()"> Đăng ký</button>
+        <div class="showtable">
+            <table id="render" border="1">
+                <tr >
+                    <td>tên tour</td>
+                    <td>mã tour</td>
+                    <td>đơn vị tổ chức</td>
+                    <td>giới tính</td>
+                    <td>số người đi cùng</td>
+                    <td>hành động</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- <table>
+            <thead>
+                <tr >
+                    <td>tên tour</td>
+                    <td>mã tour</td>
+                    <td>đơn vị tổ chức</td>
+                    <td>giới tính</td>
+                    <td>số người đi cùng</td>
+                    <td>hành động</td>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table> -->
+
+    </div>
+
+    <script>
+        var data = [];
+        function hienthi() {
+            var nameTour = document.getElementById("nameTour");
+            var code = document.getElementById("code");
+            var loai = document.getElementById("loai");
+            // var gender = document.getElementsByName("gender");
+            var gender = document.forms.elements["gender"];
+            var songuoi = document.getElementById("songuoi");
+
+            if (nameTour.value.length == "") {
+                nameTour.style.border = "1px solid red";
+                document.getElementById("error1").innerHTML = "Tên tour không được để trống!";
+                return false;
+            } else if (nameTour.value.length < 10) {
+                nameTour.style.border = "1px solid red";
+                error1.innerHTML = "Tên tour quá ngắn!";
+                return false;
+            } else {
+                nameTour.style.border = "1px solid blue";
+                error1.innerHTML = "";
+            }
+
+
+            if (code.value.length == "") {
+                code.style.border = "1px solid red";
+                document.getElementById("error2").innerHTML = "mã tour không được để trống!";
+                return false;
+            } else if (code.value.length < 5) {
+                code.style.border = "1px solid red";
+                error2.innerHTML = "mã tour quá ngắn!";
+                return false;
+            } else {
+                code.style.border = "1px solid blue";
+                error2.innerHTML = "";
+            }
+
+
+            if (loai.value == 0) {
+                document.getElementById("error3").innerHTML = "đơn vị tổ chức phải được chọn!";
+                return false;
+            } else {
+
+                error3.innerHTML = "";
+            }
+
+            if (gender[0].checked !== true && gender[1].checked !== true) {
+                document.getElementById("error4").innerHTML = "Bạn phải chọn giới tính!";
+                return false;
+            }
+            else {
+                error4.innerHTML = "";
+            }
+
+
+
+            var hinthi1 = {
+                tentuor: nameTour.value,
+                matour: code.value,
+                loaitour: loai.value,
+                gendertour: gender.value,
+                songuoitour: songuoi.value
+            };
+            data.push(hinthi1);
+           
+            render();
+
+
+        }
+        function render() {
+
+            table =
+                `
+                <tr>
+                    <td>Tên tour</td>
+                    <td>mã tour</td>
+                    <td>đơn vị tổ chức</td>
+                    <td>giới tính</td>
+                    <td>số người đi cùng</td>
+                    <td>hành động</td>
+                </tr>`
+            for (let i = 0; i < data.length; i++) {
+                table +=
+                    `
+                <tr>
+                    <td>${data[i].tentuor}</td>
+                    <td>${data[i].matour}</td>
+                    <td>${data[i].loaitour}</td>
+                    <td>${data[i].gendertour}</td>
+                    <td>${data[i].songuoitour}</td>
+                    <td><button onclick="remove()">xóa</button></td>
+                 </tr>
+                `
+            }
+            console.log(table);
+            document.getElementById("render").innerHTML = table;
+            render;
+        }
+        function remove() {
+            data.map(removeFull);
+            function removeFull(){
+
+            }
+        }
+    </script>
+</body>
+
+</html>

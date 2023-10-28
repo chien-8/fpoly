@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="a1.jfif" id="anh" onmouseover="" onmouseout="">
+
+    <script>
+        var anh = document.querySelector("#anh");
+        //  cải tiến
+        var obj1 =new Image();
+        obj1.src="a1.jfif";
+        var obj2= new Image();
+        obj2.src="a2.jfif";
+        anh.addEventListener("mouseover", function (){ 
+            // this.setAttribute("src", "a2.jfif");
+            this.setAttribute("src", obj2.src);
+        });
+        anh.addEventListener("mouseover", function (){ 
+            // this.setAttribute("src", "a1.jfif");
+            this.setAttribute("src", obj1.src);
+        });
+    </script>
+</body>
+</html>

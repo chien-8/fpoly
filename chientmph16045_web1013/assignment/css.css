@@ -1,0 +1,380 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+ body{
+    background-color: white;
+}
+#body{
+    width: 960px;
+    margin: 0 auto;
+
+}
+#header{
+    height: 150px;
+    background-color: rgb(4, 117, 117) ;
+}
+/* xong header */
+#menu{
+    height: 50px;
+    background-color: #0264a5;
+}
+#menu ul li{ 
+    list-style: none;
+    display: inline-block;
+    padding-left: 20px;
+}
+#menu ul li a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 20px;
+    display: block;
+    line-height: 50px;
+}
+#menu ul li a:hover{
+    color:red;
+    text-decoration: underline;
+}
+#menu form{
+    list-style: none;
+    display: inline-block;
+    padding-left: 70px;
+}
+/* xong menu */
+#slide{
+    height: 35px;
+}
+#slide p{
+    line-height: 35px;
+    font-size: 20px;
+    color: red;
+}
+/* trang chủ */
+#content{
+    height: 1200px;
+    background-color:  whitesmoke;
+}
+#left{
+    
+    width: 200px;
+    height: 100%;
+    float: left;
+    background-color: whitesmoke;
+}
+.title{
+    height: 50px;
+    background-color: #0264a5;
+}
+.title h2{
+    text-align: center;
+    color: white;
+    line-height: 50px;
+}
+#left ul{
+    margin: 0px 0px 5px 0px ;
+}
+#left ul li {
+    border: 1px solid gray;
+    list-style: none;
+    display: block;
+    padding-left:20px ;
+    line-height: 50px;
+}
+#left ul li a{
+    text-decoration: none;
+}
+#left ul li:hover{
+    background-color: coral;
+    border-bottom: 1px solid grey;
+}
+.form{
+    border: 1px solid gray;
+    padding: 15px 10px;
+    margin-bottom: 5px;
+}
+
+/* xong left */
+#noidung{
+    width:560px;
+    height: 100%;
+    float: left;
+    
+}
+#anh{
+    margin: 0px 0px 10px 10px;
+    position: relative;
+}
+#prev{
+    text-transform: uppercase;
+    top:130px;
+    left: 20px;
+    position: absolute;
+}
+#next{
+    text-transform: uppercase;
+    top:130px;
+   right: 20px;
+    position: absolute;
+}
+.nd{
+    padding: 10px ;
+    margin: 0px 0px 10px 0px;
+    margin-top: 10px;
+}
+
+#noidung ul{
+    padding: 0px;
+    margin: 0px;
+}
+#noidung ul li{
+    list-style: none;
+    clear: left;
+    border-bottom: 2px solid black;
+    float: left;
+    margin-bottom: 20px;
+    
+}
+#noidung ul li img{
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+/* xong nội dung */
+#right{
+    
+    width: 200px;
+    height: 100%;
+    float: left;
+    background-color: whitesmoke;
+}
+#right ul{
+    border: 1px solid gray;
+    padding-left:23px ;
+    line-height: 35px;
+}
+#right ul li a{
+    text-decoration: none;
+    font-size: 17px;
+}
+#right ul li a:hover{
+    color: red;
+    text-decoration: underline;
+}
+/* xong trang chủ */
+
+
+/* giới thiệu */
+#content2{
+    height: 1200px;
+    background-color: whitesmoke;
+}
+#noidung2{
+    width: 760px;
+    height: 100%;
+    float: left;
+}
+#noidung2 h2{
+    margin: 10px;
+    text-align: left;
+    
+}
+#noidung2 h4{
+    margin-left: 10px;
+}
+#noidung2 p {
+    margin-left: 10px;
+}
+
+.anh2{
+    margin: 10px 0px 10px 10px;
+}
+
+#right2{
+    
+    width: 200px;
+    height: 100%;
+    float: left;
+    
+}
+#right2 ul{
+    border: 1px solid gray;
+    padding-left: 20px;
+    line-height: 35px;
+}
+#right2 ul li a{
+    text-decoration: none;
+    font-size: 17px;
+}
+#right2 ul li a:hover{
+    color: red;
+    text-decoration: underline;
+}
+.bang2{
+    margin: 5px 0px 0px 0px;
+}
+.title2{
+    height: 50px;
+    background-color: #0264a5;
+}
+.title2 h2{
+    text-align: center;
+    color: white;
+    line-height: 50px;
+}
+.title3{
+    height: 50px;
+    background-color: #0264a5;
+}
+.title3 h2{
+    text-align: center;
+    color: white;
+    line-height: 50px;
+}
+
+
+/* xong giới thiệu */
+
+
+ /* tin tức */
+ #content3{
+    height: 1000px;
+    background-color: whitesmoke;
+} 
+#noidung3{
+    width: 760px;
+    height: 100%;
+    float: left;
+}
+#noidung3 h2{
+    margin: 10px;
+    text-align: left;
+    
+}
+.nd3{
+    padding: 10px ;
+    margin: 0px 0px 10px 0px;
+    margin-top: 10px;
+}
+
+#noidung3 ul{
+    padding: 0px;
+    margin: 0px;
+}
+#noidung3 ul li{
+    list-style: none;
+    clear: left;
+    border-bottom: 2px solid black;
+    float: left;
+    margin-bottom: 20px;
+    
+}
+#noidung3 ul li img{
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+
+ /* xong tin tức  */
+
+
+/* thời khóa biểu */
+#content4{
+    height: 2870px;
+    background-color: whitesmoke;
+} 
+#noidung4{
+    width: 760px;
+    height: 100%;
+    float: left;
+}
+#noidung4 h2{
+    margin: 10px;
+    text-align: left;
+}
+#noidung4 img{
+    margin: 0px 10px 0px 30px;
+}
+/* xong thời khóa biểu */
+
+/* liên hệ */
+#content5{
+    height: 1100px;
+    background-color: whitesmoke;
+} 
+#noidung5 h2{
+    text-align: left;
+    margin: 10px;
+}
+.form1{
+    float: left;
+    width: 540px;
+    margin: 37px 0px 0px 10px;
+    background-color: whitesmoke;
+}
+.form1 h2{
+     text-align: center;
+}
+.form1 p{
+    margin: 10px 10px 10px 10px;
+}
+.a{
+    margin: 3px 0px;
+    width: 500px;
+    height: 120px;
+}
+.ten{
+    display: inline-block;
+    margin: 20px 2px;
+    width: 500px;
+    
+}
+.luu{
+    margin: 0px 0px 15px 0px;
+}
+.dieukhien{
+    margin: 3px 0px;
+    width: 500px;
+    display: block;
+    height: 30px;
+}
+button{
+   font-size: 20px;
+}
+.bando{
+    border: 1px solid gray;
+}
+.diachi{
+    margin: 5px 0px 5px 0px;
+    float: right;
+}
+.diachi a{
+    margin-right:10px ;
+    line-height: 50px;
+    font-size: 15px;
+    color: black;
+}
+.diachi h2{
+    margin-right:10px ;
+    color: black;
+}
+.diachi p{
+    padding: 15px 15px;
+}
+/* xong liên hệ */
+
+
+
+#footer{
+    height: 150px;
+    background-color: #0264a5;
+    text-align: center;
+}
+#footer a{
+    line-height: 10px;
+    font-size: 15px;
+    color: white;
+}
+#footer h2{
+    color: white;
+}
+#footer p{
+    padding: 15px 15px;
+}

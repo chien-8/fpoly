@@ -1,0 +1,30 @@
+{
+  "resources": [
+    {
+      "id": 1,
+      "name": "1232131",
+      "saleprice": "12",
+      "egularprice": "1241",
+      "images": "",
+      "categories": "Đồ ăn nhẹ",
+      "description": "12315545"
+    },
+    {
+      "id": 2,
+      "name": "Đinh Văn Kiên143123",
+      "saleprice": "2131",
+      "egularprice": "1231",
+      "image": "",
+      "categories": "Tráng miệng"
+    },
+    {
+      "id": 3,
+      "name": "Tạ Minh Chiến24r4",
+      "saleprice": "313",
+      "egularprice": "1231",
+      "images": "",
+      "categories": "Tráng miệng",
+      "description": "23124124"
+    }
+  ]
+}

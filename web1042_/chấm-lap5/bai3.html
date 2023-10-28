@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="a">
+        <input class="item" type="checkbox" >Trần thị huệ<br>
+        <input class="item" type="checkbox" >Trần thị loan<br>
+        <input class="item" type="checkbox" >nguyễn mai linh<br>
+        <input class="item" type="checkbox" >lê thị trà my<br> 
+        <button id="chon" value="" onclick="chon('item',this)">chọn</button>
+        <button id="bochon" value="" onclick="bchon('item',this)" class="checkbox">bỏ chọn</button>
+        
+    </div>
+    <script>
+        function chon(class_name, obj){
+            var items = document.getElementsByClassName(class_name);
+            if(obj.checked==false){
+                for(i=0;i<items.length;i++)
+                   items[i].checked=false;
+            }
+            else{
+                for(i=0;i<items.length;i++)
+                   items[i].checked=true;
+            }
+        }
+        function bchon(class_name, obj){
+            var items = document.getElementsByClassName(class_name);
+            if(obj.checked==true){
+                for(i=0;i<items.length;i++)
+                   items[i].checked=true;
+            }
+            else{
+                for(i=0;i<items.length;i++)
+                   items[i].checked=false;
+                   
+            }
+        }
+    </script>
+</body>
+</html>

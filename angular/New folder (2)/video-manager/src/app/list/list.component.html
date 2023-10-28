@@ -1,0 +1,31 @@
+<p>list works!</p>
+<button><a routerLink="add">add</a></button>
+<table>
+    <thead>
+        <tr>
+            <td>id</td>
+            <td>name</td>
+            <td>image</td>
+            <td>url</td>
+            <td>description</td>
+            <td>view</td>
+            <td>action</td>
+        </tr>
+
+    </thead>
+    <tbody *ngFor="let p of data">
+        <tr>
+            <td>{{p.id}}</td>
+            <td>{{p.name}}</td>
+            <td>{{p.image}}</td>
+            <td>{{p.url}}</td>
+            <td>{{p.description}}</td>
+            <td>{{p.view}}</td>
+            <td>
+                <button routerLink="update/{{p.id}}">edit</button>
+                <button (click)="ondelete(p.id)">remove</button>
+            </td>
+
+        </tr>
+    </tbody>
+</table>

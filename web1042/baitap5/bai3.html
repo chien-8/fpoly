@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get">
+        Username <input type="text" id="uname" 
+                    onfocus="getFocus(this)" onblur="lotsFocus(this)" /><span id="sp1"></span><br>
+        Password <input type="password" id="passwd" 
+                    onfocus="getFocus(this)" onblur="lotsFocus(this)" /><span id="sp2"></span><br>
+        <button type="button" onclick="Login()">Login</button>
+    </form>
+
+    <script>
+        
+        
+
+        function Login(){
+            //lấy giá trị người dùng nhập
+            var uname =document.querySelector("#uname").value;
+            var passwd =document.querySelector("#passwd").value;
+            console.log(uname)
+            if(uname=='admin' && passwd=='123'){
+                alert("đăng nhập thành công");
+            }else{
+                alert("sai thông tin đăng nhập");
+            }
+        }
+        function getFocus(element){
+            element.style.background="yellow";
+            element.style.outline="none";
+            element.style.border="1px solid red";
+
+        }
+        function lostFocus(element){
+            element.style.background="none";
+            element.style.outline="none";
+            element.style.border="1px solid #ccc";
+            if(element.id=='uname'){
+            //kiểm tra username
+                var uname=document.querySelector("#uname").value;
+                if(uname=='admin'){
+                    document.querySelector("#sp1").innerHTML="Ok";
+                    document.querySelector("#sp2").style.color="Green";
+                }
+                else{
+                    document.querySelector("#sp1").innerHTML="sai username";
+                    document.querySelector("#sp2").style.color="red";
+            
+                }
+                
+        }
+        }
+
+
+        //yêu cầu 
+        /* Thêm 2 thẻ span vào cạnh 2 ô nhập user và pass. Đặt id lần lượt là sp1, sp2, không viết nội dung cho thẻ
+        Trong hàm lostFocus hãy kiểm tra nếu ID của element là uname thì kiểm tra tiếp tên đăng nhập có phải là admin. Nếu 
+        đúng thì gắn nội dung là OK vào thẻ sp1. Nếu sai thì gắn nội dung sai username vào thẻ sp1.
+        */
+
+        
+    </script>
+</body>
+</html>

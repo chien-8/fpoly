@@ -1,0 +1,34 @@
+{
+  "ontap": [
+    {
+      "name": "Tạ Minh Chiến",
+      "price": "1223",
+      "type": "1",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Đinh Văn Kiênas",
+      "price": "1223",
+      "type": "tráng miệng"
+    },
+    {
+      "id": 3,
+      "name": "Tạ Minh Chiến",
+      "price": "1223324",
+      "type": "tráng miệng"
+    },
+    {
+      "id": 4,
+      "name": "qửadas",
+      "price": "1223",
+      "type": "tráng miệng"
+    },
+    {
+      "name": "công ty chiến",
+      "price": "1223",
+      "type": "đồ uống",
+      "id": 5
+    }
+  ]
+}

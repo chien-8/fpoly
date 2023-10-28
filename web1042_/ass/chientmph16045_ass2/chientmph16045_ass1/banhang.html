@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.4.1.min.js"></script>
+    <link href="css.css" rel="stylesheet">
+    
+    <style>
+        .nhom {
+            margin: 10px 75px;
+            width: 500px;
+            margin-left: 435px;
+        }
+    </style>
+    <script>
+        var soluong = document.querySelectorAll("input[type=number]");
+        for (var i = 0; i < soluong.length; i++) {
+            soluong[i].disabled = true;
+        }
+        function muaHang() {
+            var check = document.querySelectorAll("input[type=checkbox]");
+            var thanh_tien = [];
+            var don_gia = [];
+            var soluong = document.querySelectorAll("input[type=number]");
+            for (i = 0; i < check.length; i++) {
+                thanh_tien[i] = check[i].parentNode.parentNode.lastElementChild;
+                don_gia[i] = check[i].parentNode.nextElementSibling.nextElementSibling.innerText;
+            }
+            var tong = 0;
+            for (i = 0; i < check.length; i++) {
+                if (check[i].checked) {
+                    soluong[i].disabled = false;
+                    thanh_tien[i].innerText = Number(don_gia[i]) * Number(soluong[i].value);
+                    tong += Number(thanh_tien[i].innerText);
+                } else {
+                    soluong[i].disabled = true;
+                    thanh_tien[i].innerText = "";
+                }
+            }
+            var tongTien = document.querySelector("#tongtien");
+            tongTien.innerText = tong;
+        }
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#gia").change(function() {
+                var val = $(this).val();
+                $("#table tr").each(function(index, tr) {
+                    var price = $(tr).find("td:eq(2)").text();
+                    if (val == 0) {
+                        $("tr").show();
+                    } else if (val == 1 && price <= 400) {
+                        $(".muc1").show();
+                        $(".muc2").hide();
+                    } else if (val == 2 && price >= 450 && price <= 700) {
+                        $(".muc1").hide();
+                        $(".muc2").show();
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="body">
+        <div id="header">
+            <img src="img/Banner1-1.png" width="960px">
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="anh.html">Bộ sưu tập ảnh</a></li>
+                <li><a href="dangky.html">Đăng ký</a></li>
+                <li><a href="banhang.html">Bán hàng</a></li>
+            </ul>
+        </div>
+        <div id="noidung3">
+            <h2>Bán hàng</h2>
+            <div class="nhom">
+                <select name="mucgia" onchange="locSp()" class="price" id="gia">
+                    <option value="0">Mức giá</option>
+                    <option value="1">0>>100</option>
+                    <option value="2">Từ 450>>700</option>
+                </select>
+            </div>
+            <hr>
+            <table id="table" border="1px" onchange="muaHang()">
+                <tr>
+                    <th></th>
+                    <th>Hàng hóa</th>
+                    <th>Đơn giá</th>
+                    <th>Số lượng</th>
+                    <th>Thành tiền</th>
+                </tr>
+                <tr class="muc2">
+                    <td><input type="checkbox"></td>
+                    <td>Iphone 9</td>
+                    <td>700</td>
+                    <td><input type="number" value="0" min="1"></td>
+                    <td></td>
+                </tr>
+                <tr class="muc1">
+                    <td><input type="checkbox"></td>
+                    <td>Samsung</td>
+                    <td>400</td>
+                    <td><input type="number" value="0" min="1"></td>
+                    <td></td>
+                </tr>
+                <tr class="muc1">
+                    <td><input type="checkbox"></td>
+                    <td>Nokia</td>
+                    <td>100</td>
+                    <td><input type="number" value="0" min="1"></td>
+                    <td></td>
+                </tr>
+                <tr class="muc2">
+                    <td><input type="checkbox"></td>
+                    <td>Sony</td>
+                    <td>450</td>
+                    <td><input type="number" value="0" min="1"></td>
+                    <td></td>
+                </tr>
+                <tr class="muc1">
+                    <td><input type="checkbox"></td>
+                    <td>Motorola</td>
+                    <td>180</td>
+                    <td><input type="number" value="0" min="1"></td>
+                    <td></td>
+                </tr>
+                <tr class="muc2">
+                    <td><input type="checkbox"></td>
+                    <td>Oppo</td>
+                    <td>600</td>
+                    <td><input type="number" value="0" min="1"></td>
+                    <td></td>
+                </tr>
+                <tr class="muc1">
+                    <td><input type="checkbox"></td>
+                    <td>bPhone</td>
+                    <td>90</td>
+                    <td><input type="number" value="0" min="1"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th colspan="4" style="text-align: center">Tổng</th>
+                    <th id="tongtien"></th>
+                </tr>
+            </table>
+        </div>
+        <div id="footer">
+            <h2>chientmph16045_assignment</h2>
+        </div>
+    </div>
+</body>
+
+</html>

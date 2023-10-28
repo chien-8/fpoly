@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var x = prompt("Giá trị của bạn");
+        if (isNaN(x) == false) {
+            alert(x + " là một số");
+        }
+        else {
+            alert(x + "không phải là một số");
+        }
+        var a = Math.sqrt(x);
+        document.write("căn bậc hai số đã nhập:" + a + "<br>");
+        var b = Math.pow(x, 2);
+        document.write("bình phương số đã nhập:" + b + "<br>");
+        var c = Math.round(x);
+        document.write("làm tròn số đã nhập:" + c + "<br>");
+    </script>
+</body>
+</html>

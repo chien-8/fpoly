@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function vandongvien(mvdv,hoten,ngaysinh,giathuong){
+        //     this.mvdv=mvdv;
+        //     this.hoten=hoten;
+        //     this.ngaysinh=ngaysinh;
+        //     this.giathuong=giathuong;
+        //     this.ktngaysinh=function(){
+        //         console.log(this.mvdv,this.hoten,this.ngaysinh,this.giathuong);
+        //     }
+        // }
+        // function kiemtradk(mvdv,hoten,ngaysinh,giathuong,dk){
+        //     vandongvien.call(this,mvdv,hoten,ngaysinh,giathuong)
+        // }
+        function calculate_age(dob) { 
+    var diff_ms = Date.now() - dob.getTime();
+    var age_dt = new Date(diff_ms); 
+  
+    return Math.abs(age_dt.getUTCFullYear() - 1970);
+    console.log(age_dt);
+}
+
+document.write(calculate_age(new Date(2002, 11, 4))+"<br/>");
+
+document.write(calculate_age(new Date(1962, 1, 1)));
+</script>
+    </script>
+</body>
+</html>

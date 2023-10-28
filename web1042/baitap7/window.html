@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="openwin()">open</button>
+    <button onclick="closewin()">close</button>
+    <button onclick="doimau()">doi mau</button>
+    <button onclick="xemscreen()">xem creen</button>
+    <script>
+        var win ;
+        function openwin(){
+            win =window.open("filae.html","_blank","width=400","height=300")
+        }
+        function clodewin(){
+            win.close();
+        }
+        function doimau(){
+            win.document.querySelector("#h1").style.color="red";
+        }
+    function xemscreen(){
+        //hiển thị chiều cao rông
+        console.log("xem chieu cao"+window.screen);
+        console.log("xem navigator"+window.navigator);
+        console.log("xem location"+window.location);
+    }
+    function XemWeb(){
+        windowx8d
+    }
+    </script>
+</body>
+</html>

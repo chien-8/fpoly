@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite App</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    li {
+      display: inline;
+      margin-left: 10px;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <h1>Order list</h1>
+  <div class="form grid grid-cols-2 gap-4">
+    <form action="" class="border border-dashed border-red-300 p-5" id="form">
+      <div class="flex flex-col mb-4">
+        <label class="font-bold" for="">Tên món ăn</label>
+        <input class="border outline-none" id="name" type="text">
+        <div class="error text-red-500 text-sm"></div>
+      </div>
+      <div class="flex flex-col mb-4">
+        <label class="font-bold" for="">Số lượng</label>
+        <input class="border outline-none" id="amount" type="number">
+        <div class="error text-red-500 text-sm"></div>
+      </div>
+      <div class="flex flex-col mb-4">
+        <label class="font-bold" for="">Giá</label>
+        <input class="border outline-none" id="price" type="number">
+        <div class="error text-red-500 text-sm"></div>
+      </div>
+      <div class="flex flex-col mb-4">
+        <label class="font-bold" for="">Loại đồ ăn</label>
+        <select name="" id="type" class="outline-none border">
+          <option value=""></option>
+          <option value="Tráng miệng">Tráng miệng</option>
+          <option value="Đồ ăn nhẹ">Đồ ăn nhẹ</option>
+          <option value="Đồ uống">Đồ uống</option>
+          <option value="Đồ nướng">Đồ nướng</option>
+        </select>
+        <div class="error text-red-500 text-sm"></div>
+      </div>
+      <div class="flex flex-col mb-4">
+        <label class="font-bold" for="">Ảnh</label>
+        <input type="file" id="image" accept="image/png, image/gif, image/jpeg">
+        <div class="error text-red-500 text-sm"></div>
+        <img src="" alt="" id="preview-image">
+      </div>
+      <div class="flex flex-col mb-4">
+        <label class="font-bold" for="">Mô tả</label>
+        <textarea class="border outline-none" name="" id="description" cols="30" rows="5"></textarea>
+        <div class="error text-red-500 text-sm"></div>
+      </div>
+      <button class="bg-red-300 p-2 font-bold text-white" type="submit">Tạo mới</button>
+    </form>
+    <div class="border border-dashed border-blue-300">
+      <table class="border border-dashed border-blue-300" style="width:70%;">
+        <thead>
+          <td>STT</td>
+          <td>Tên món ăn</td>
+          <td>Số lượng</td>
+          <td>Loại đồ ăn</td>
+          <td>Hết hàng</td>
+          <td>chức năng</td>
+        </thead>
+        <tbody id="show">
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div>
+    <h3></h3>
+   <a href="userpage.html">use page</a> 
+    <input type="search" style="border: 1px solid black;"><br>
+    <nav>
+      <ul>
+        <li>bộ lọc:</li>
+        <li><a href="">tất cả</a></li>
+        <li><a href="">tráng miệng</a></li>
+        <li><a href="">soup</a></li>
+        <li><a href="">đồ nướng</a></li>
+        <li><a href="">nước uống</a></li>
+      </ul>
+    </nav>
+    <div id="use_page">
+      
+    </div>
+  </div>
+  <script type="module" src="./add.js"></script>
+  <script src="userpage.js"></script>
+</body>
+
+</html>

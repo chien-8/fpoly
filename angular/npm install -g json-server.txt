@@ -1,0 +1,26 @@
+npm install -g @angular/cli
+ng new projectName
+npm install -g json-server
+json-server --watch db.json
+
+import {HttpClientModule} from "@angular/common/http"
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+
+FormGroup,FormControl,[formGroup]
+
+import { ActivatedRoute, Router } from '@angular/router';
+ng generate module app-routing --flat --module=app
+
+
+this.http.get<any>("http://localhost:3000/signup").subscribe(p=>{
+      this.data=p
+      const user =this.data.find((a:any)=>{
+        console.log(a)
+          return a.email=== this.login.value.email && a.pass === this.login.value.pass
+      })
+      if(user){
+        alert("đăng nhập thành công")
+      }else{
+        alert("đăng nhập thất bại")
+      }
+    })

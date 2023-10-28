@@ -1,0 +1,23 @@
+body{
+    font-variant: small-caps;
+}
+.dieukhien{
+    margin: 3px 0px;
+    width: 500px;
+    display: block;
+}
+
+.nhom{
+    margin: 10px 2px;
+    width: 500px;
+}
+.button:focus{
+    color: blue;
+    
+}
+.button{
+    color: red;
+    border-radius: initial;
+    box-shadow: inset 0 0 2px rgb(0, 0, 255);
+    
+}

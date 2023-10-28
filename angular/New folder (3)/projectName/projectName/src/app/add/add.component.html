@@ -1,0 +1,10 @@
+<p>add works!</p>
+<form [formGroup]="add" (ngSubmit)="onAdd()">
+    name
+    <input formControlName="name">
+    price
+    <input formControlName="price">
+    descriprtion
+    <input formControlName="descriprion">
+    <button type="submit">add</button>
+</form>
